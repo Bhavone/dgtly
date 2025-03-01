@@ -1,0 +1,95 @@
+@use "/src/styles/variables.scss" as variables;
+
+.expertPartnersContainer {
+  background: variables.$white-color-1;
+
+  .cardsContainer {
+    justify-content: center !important;
+
+    .card {
+      max-width: 405px;
+      border: none !important;
+
+      .expertImage {
+        max-width: 234px;
+      }
+
+      .cardContent {
+        .expertHeading {
+          @include variables.d-flex($al: center, $jc: flex-start, $gap: 11px);
+          @include variables.font-style(
+            $fs: 20px !important,
+            $fw: 700,
+            $lh: 150%
+          );
+
+          .linkedIn {
+            display: flex;
+            max-width: 36px;
+          }
+        }
+
+        .cardDetail {
+          @include variables.font-style(
+            $fs: 18px !important,
+            $fw: 400,
+            $lh: 150%
+          );
+          padding-top: 8px;
+          color: variables.$grey-color-4;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .expertPartnersContainer {
+    .cardsContainer {
+      .card {
+        @include variables.d-flex(
+          $al: center,
+          $jc: space-between,
+          $gap: 16px,
+          $fd: column
+        );
+
+        .cardContent {
+          align-items: center !important;
+
+          .cardDetail {
+            text-align: center;
+            @include variables.font-style(
+              $fs: 16px !important,
+              $fw: 400,
+              $lh: 150%
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .expertPartnersContainer {
+    .cardsContainer {
+      .card {
+        align-items: center !important;
+
+        .cardContent {
+          align-items: center !important;
+
+          .cardDetail {
+            text-align: center;
+            @include variables.font-style(
+              $fs: 16px !important,
+              $fw: 400,
+              $lh: 150%
+            );
+          }
+        }
+      }
+    }
+  }
+}

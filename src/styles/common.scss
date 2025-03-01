@@ -1,0 +1,56 @@
+@use "/src/styles/variables.scss" as variables;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Satoshi", sans-serif;
+}
+
+html {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.commonHeading {
+  color: variables.$black-color-2;
+  @include variables.font-style($fs: 40px, $fw: 700, $lh: normal);
+  text-align: center;
+
+  @media screen and (max-width: 992px) {
+    @include variables.font-style($fs: 32px, $fw: 700, $lh: normal);
+  }
+
+  @media screen and (max-width: 568px) {
+    @include variables.font-style($fs: 24px, $fw: 700, $lh: normal);
+  }
+}

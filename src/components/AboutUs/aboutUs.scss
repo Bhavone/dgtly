@@ -1,0 +1,126 @@
+@use "/src/styles/variables.scss" as variables;
+
+.aboutContainer {
+  padding: 80px;
+  @include variables.d-flex($al: center, $jc: space-between, $gap: 104px);
+
+  .aboutImageContainer {
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $gap: 28px,
+      $fd: column
+    );
+  }
+
+  .aboutDetail {
+    @include variables.d-flex(
+      $al: flex-start,
+      $jc: space-between,
+      $gap: 32px,
+      $fd: column
+    );
+
+    .certifiedContainer {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $gap: 8px,
+        $fd: column
+      );
+      border-radius: 13px;
+      border: 1px solid #9bbaf8;
+      background: linear-gradient(99deg, #fbfcfe 18.61%, #fff 68.77%);
+      padding: 24px;
+
+      p {
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 8px);
+        color: variables.$black-color-1;
+        @include variables.font-style($fs: 18px, $fw: 400, $lh: 162%);
+      }
+    }
+
+    .aboutContent {
+      color: variables.$black-color-1;
+      @include variables.font-style($fs: 18px, $fw: 300, $lh: 162%);
+
+      .highlight {
+        color: variables.$blue-color-0;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .aboutContainer {
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $gap: 40px,
+      $fd: column
+    );
+
+    .aboutImageContainer {
+      margin-top: 12px;
+    }
+
+    .aboutContent {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .aboutContainer {
+    padding: 40px 18px;
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $gap: 28px,
+      $fd: column
+    );
+
+    .aboutImageContainer {
+      margin-top: 12px;
+      @include variables.d-flex(
+        $al: center,
+        $jc: space-between,
+        $gap: 28px,
+        $fd: column
+      );
+
+      img {
+        max-width: 269px;
+      }
+    }
+
+    .aboutDetail {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $gap: 32px,
+        $fd: column
+      );
+
+      .certifiedContainer {
+        p {
+          img {
+            padding-top: 6px;
+          }
+
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: space-between,
+            $gap: 8px
+          );
+        }
+      }
+
+      .aboutContent {
+        color: variables.$black-color-1;
+        @include variables.font-style($fs: 16px, $fw: 400, $lh: 162%);
+      }
+    }
+  }
+}

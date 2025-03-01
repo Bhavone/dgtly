@@ -1,0 +1,251 @@
+@use "/src/styles/variables.scss" as variables;
+
+.carouselContainer {
+  padding: 80px;
+  position: relative;
+}
+
+.carouselDetailContainer {
+  margin-top: 40px;
+  max-width: 900px;
+
+  .carouselHeading {
+    text-align: start;
+    margin-bottom: 12px;
+    color: variables.$black-color-3;
+    @include variables.font-style($fs: 32px, $fw: 500, $lh: 150%);
+  }
+
+  .carouselDetail {
+    max-width: 900px;
+    @include variables.font-style($fs: 24px, $fw: 400, $lh: 150%);
+    color: variables.$black-color-3;
+    text-align: start;
+  }
+
+  .carouselProfile {
+    margin-top: 40px;
+    width: 100%;
+    @include variables.d-flex($al: center, $jc: space-between, $gap: 56px);
+
+    .profileContainer {
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 12px);
+
+      .profileImage {
+        max-width: 60px;
+      }
+
+      .profileNameContainer {
+        @include variables.d-flex(
+          $al: flex-start,
+          $jc: space-between,
+          $fd: column
+        );
+
+        .profileName {
+          @include variables.font-style($fs: 18px, $fw: 500, $lh: 150%);
+          color: variables.$black-color-2;
+        }
+
+        .profileDesigination {
+          @include variables.font-style($fs: 18px, $fw: 400, $lh: 150%);
+          color: variables.$grey-color-1;
+          text-align: start;
+        }
+      }
+    }
+
+    .brandImage {
+      max-width: 135px;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.customNavContainer {
+  position: relative;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  top: 241px;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  top: 241px;
+  cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 16px;
+  width: 30px;
+  height: 4px;
+  background: #000;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: variables.$blue-color-0;
+}
+
+.swiper-slide-active {
+  // height: 316px;
+}
+
+@media screen and (max-width: 992px) {
+  .swiper-slide-active {
+    height: 650px !important;
+  }
+
+  .swiper-button-prev {
+    top: 660px;
+    left: 100px;
+    cursor: pointer;
+
+    img {
+      max-width: 48px;
+    }
+  }
+
+  .swiper-button-next {
+    top: 660px;
+    right: 100px;
+    cursor: pointer;
+
+    img {
+      max-width: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .carouselContainer {
+    padding: 40px 16px;
+    position: relative;
+  }
+
+  .carouselDetailContainer {
+    margin-top: 40px;
+    max-width: 900px;
+
+    .carouselHeading {
+      color: variables.$black-color-3;
+      @include variables.font-style($fs: 20px, $fw: 500, $lh: 150%);
+    }
+
+    .carouselDetail {
+      max-width: 900px;
+      @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+      color: variables.$black-color-3;
+      text-align: start;
+    }
+
+    .carouselProfile {
+      margin-top: 40px;
+      width: 100%;
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 56px);
+
+      .profileContainer {
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 12px);
+
+        .profileImage {
+          max-width: 52px;
+        }
+
+        .profileNameContainer {
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: space-between,
+            $fd: column
+          );
+
+          .profileName {
+            white-space: nowrap;
+            @include variables.font-style($fs: 16px, $fw: 500, $lh: 150%);
+            color: variables.$black-color-2;
+          }
+
+          .profileDesigination {
+            @include variables.font-style($fs: 18px, $fw: 400, $lh: 150%);
+            color: variables.$grey-color-1;
+            text-align: start;
+          }
+        }
+      }
+
+      .brandImage {
+        max-width: 96px;
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    height: 550px !important;
+  }
+
+  .swiper-button-prev {
+    top: 560px;
+    left: 18%;
+    cursor: pointer;
+
+    img {
+      max-width: 48px;
+    }
+  }
+
+  .swiper-button-next {
+    top: 560px;
+    right: 18%;
+    cursor: pointer;
+
+    img {
+      max-width: 48px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "/src/styles/variables.scss" as variables;
+
+.bannerButtonContainer {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 32px;
+  background: variables.$blue-color-0;
+  @include variables.d-flex($al: center, $jc: flex-start, $gap: 12px);
+
+  .scheduleCallButton {
+    color: variables.$white-color-0;
+    @include variables.font-style($fs: 18px, $fw: 500, $lh: 150%);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bannerButtonContainer {
+    padding: 14px 22px;
+
+    .scheduleCallButton {
+      @include variables.font-style($fs: 16px, $fw: 500, $lh: 150%);
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use "/src/styles/variables.scss" as variables;
+
+.letsTogetherContainer {
+  background-image: url("../../assets/images/letsTogether/letsTogetherbackground.png");
+  padding: 100px;
+  @include variables.d-flex($al: center, $jc: space-between);
+  background-color: variables.$white-color-1;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  .letsContent {
+    .letsHeading {
+      text-align: start;
+    }
+
+    .letsDetail {
+      color: variables.$grey-color-0;
+      font-family: Satoshi;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      /* 30px */
+      letter-spacing: -0.2px;
+    }
+  }
+}
+
+.letsTogetherContainerMobile {
+  padding: 40px 18px;
+  background: variables.$white-color-1;
+  @include variables.d-flex(
+    $al: center,
+    $jc: space-between,
+    $fd: column,
+    $gap: 62px
+  );
+
+  .letsContent {
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $fd: column,
+      $gap: 12px
+    );
+
+    .letsHeading {
+      color: variables.$black-color-1;
+      text-align: center;
+      font-family: Satoshi;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.78px;
+      text-transform: capitalize;
+    }
+
+    .letsDetail {
+      color: variables.$grey-color-0;
+      text-align: center;
+      font-family: Satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      /* 24px */
+      letter-spacing: -0.16px;
+    }
+  }
+}
+
+.letsButton {
+  background-image: url("../../assets/images/letsTogether/letsTogetherbackground.png");
+  position: relative;
+  display: flex;
+  background-color: variables.$white-color-1;
+  height: 295px;
+  justify-content: center;
+  align-items: center;
+
+  .backgroundImage {
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+@use "/src/styles/variables.scss" as variables;
+
+.buttonContainer {
+  border-radius: 8px;
+  border: 1px solid variables.$blue-color-0;
+  padding: 12px 19px;
+
+  width: fit-content;
+  cursor: pointer;
+
+  .scheduleCallButton {
+    color: variables.$blue-color-0;
+    @include variables.font-style($fs: 16px, $fw: 500, $lh: 100%);
+  }
+}

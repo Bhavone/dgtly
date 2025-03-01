@@ -1,0 +1,81 @@
+@use "/src/styles/variables.scss" as variables;
+
+.footerContainer {
+  padding: 40px 80px;
+  @include variables.d-flex($al: flex-start, $jc: space-between);
+
+  .info {
+    @include variables.font-style($fs: 46px, $fw: 700, $lh: 150%);
+    color: variables.$blue-color-1;
+  }
+
+  .footerContent {
+    @include variables.d-flex(
+      $al: flex-start,
+      $jc: space-between,
+      $fd: column,
+      $gap: 40px
+    );
+
+    .footerData {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $fd: column,
+        $gap: 8px
+      );
+
+      p {
+        color: variables.$grey-color-0;
+        @include variables.font-style($fs: 16px, $fw: 400, $lh: normal);
+      }
+    }
+
+    .footerLinkedIn {
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 16px);
+      color: variables.$blue-color-0;
+      @include variables.font-style($fs: 20px, $fw: 500, $lh: 150%);
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .footerContainer {
+    padding: 40px 18px;
+    @include variables.d-flex(
+      $al: flex-start,
+      $jc: space-between,
+      $fd: column,
+      $gap: 20px
+    );
+
+    .info {
+      @include variables.font-style($fs: 32px, $fw: 700, $lh: 150%);
+      color: variables.$blue-color-1;
+    }
+
+    .footerContent {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $fd: column,
+        $gap: 24px
+      );
+
+      .footerData {
+        @include variables.d-flex(
+          $al: flex-start,
+          $jc: space-between,
+          $fd: column,
+          $gap: 8px
+        );
+      }
+
+      .footerLinkedIn {
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 16px);
+        color: variables.$blue-color-0;
+        @include variables.font-style($fs: 20px, $fw: 500, $lh: 150%);
+      }
+    }
+  }
+}

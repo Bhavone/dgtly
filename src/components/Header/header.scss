@@ -1,0 +1,229 @@
+@use "/src/styles/variables.scss" as variables;
+
+.headerContainer {
+  padding: 20px 40px;
+  background: variables.$white-color-0;
+  @include variables.d-flex($al: center, $jc: space-between);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1100;
+  border-bottom: 1px solid #e0e9fe;
+
+  .websiteLogo {
+    cursor: pointer;
+  }
+
+  .navContent {
+    @include variables.d-flex($al: center, $jc: flex-start, $gap: 10px);
+
+    .dropdownArrow {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    li {
+      color: variables.$black-color-0;
+      @include variables.font-style($fs: 16px, $fw: 500, $lh: 18px);
+      cursor: pointer;
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 4.5px);
+      padding: 9px 18px;
+    }
+
+    .navWrapper {
+      position: absolute;
+      top: 40px;
+      padding-top: 28px;
+
+      .navHoverContent {
+        border-radius: 14px;
+        box-shadow: 0px 7px 71px 0px rgba(0, 0, 0, 0.12);
+
+        @include variables.d-flex(
+          $al: flex-start,
+          $jc: space-between,
+          $fd: column,
+          $gap: 20px
+        );
+        padding: 18px;
+        background: #fff;
+
+        .navDetails {
+          padding-bottom: 20px;
+          border-bottom: 1px solid #ebedf0;
+          @include variables.d-flex(
+            $al: center,
+            $jc: space-between,
+            $gap: 16px
+          );
+          width: 100%;
+
+          .navDetailslink {
+            cursor: pointer;
+
+            img {
+              max-width: 40px;
+            }
+
+            @include variables.d-flex(
+              $al: center,
+              $jc: space-between,
+              $gap: 16px
+            );
+            white-space: nowrap;
+            @include variables.font-style($fs: 14px, $fw: 500, $lh: 150%);
+            color: #000;
+          }
+        }
+
+        .navDetails:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        li:hover .navHoverContent,
+        .navHoverContent:hover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 658px) {
+  .headerContainer {
+    padding: 17px 18px;
+
+    .websiteLogo {
+      height: 30px;
+    }
+  }
+
+  .mobileNavOpen {
+    position: fixed;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: variables.$white-color-1;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 0.5s ease-in-out;
+    padding: 16px;
+
+    .buttonContainer {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .mobileNavOpen.show {
+    top: 60px;
+  }
+
+  .navContent {
+    @include variables.d-flex(
+      $al: flex-start,
+      $jc: flex-start,
+      $gap: 10px,
+      $fd: column
+    );
+    width: 100%;
+
+    .navDetails {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ebedf0;
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 16px);
+
+      .navDetailslink {
+        cursor: pointer;
+
+        img {
+          max-width: 40px;
+        }
+
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 16px);
+        white-space: nowrap;
+        @include variables.font-style($fs: 14px, $fw: 500, $lh: 150%);
+        color: #000;
+      }
+    }
+
+    .navDetails:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .dropdownArrow {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    li {
+      border-bottom: 1px solid #e4e4e4;
+      color: variables.$black-color-0;
+      @include variables.font-style($fs: 16px, $fw: 500, $lh: 18px);
+      cursor: pointer;
+      @include variables.d-flex($al: center, $jc: space-between, $gap: 4.5px);
+      width: 100%;
+      padding: 16px;
+    }
+
+    .services {
+      @include variables.d-flex(
+        $al: center,
+        $jc: space-between,
+        $gap: 4.5px,
+        $fd: column
+      );
+      width: 100%;
+
+      li {
+        width: 100%;
+      }
+    }
+
+    .navWrapper {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        max-height 0.4s ease-in-out,
+        opacity 0.3s ease-in-out,
+        padding 0.3s ease-in-out;
+
+      .navHoverContent {
+        border-radius: 14px;
+        padding: 18px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .navWrapper.show {
+      max-height: 400px;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+}

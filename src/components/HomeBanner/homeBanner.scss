@@ -1,0 +1,135 @@
+@use "/src/styles/variables.scss" as variables;
+
+.homeBannerContainer {
+  padding: 60px 80px;
+  padding-top: 139px;
+  @include variables.d-flex($al: center, $jc: space-between);
+  background: variables.$white-color-1;
+
+  .bannerContent {
+    @include variables.d-flex(
+      $al: flex-start,
+      $jc: space-between,
+      $fd: column,
+      $gap: 20px
+    );
+
+    .bannerHeading {
+      color: variables.$black-color-1;
+      @include variables.font-style($fs: 58px, $fw: 700, $lh: 76px);
+      text-transform: capitalize;
+      max-width: 70%;
+    }
+
+    .bannerDetail {
+      color: variables.$grey-color-4;
+      @include variables.font-style($fs: 20px, $fw: 400, $lh: 160%);
+      max-width: 84%;
+    }
+
+    .bannerButtonContainer {
+      margin-top: 24px;
+    }
+  }
+
+  .bannerImageContainer {
+    .bannerImage {
+      max-width: 668px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .homeBannerContainer {
+    padding: 60px 80px;
+    padding-top: 139px;
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $fd: column,
+      $gap: 40px
+    );
+
+    .bannerContent {
+      @include variables.d-flex(
+        $al: center,
+        $jc: center,
+        $fd: column,
+        $gap: 20px
+      );
+
+      .bannerHeading {
+        color: variables.$black-color-1;
+        @include variables.font-style($fs: 32px, $fw: 700, $lh: 44px);
+
+        text-align: center;
+      }
+
+      .bannerDetail {
+        max-width: 84%;
+        text-align: center;
+      }
+
+      .bannerButtonContainer {
+        margin-top: 24px;
+      }
+    }
+
+    .bannerImageContainer {
+      .bannerImage {
+        max-width: 651px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .homeBannerContainer {
+    padding: 40px 18px;
+    padding-top: 119px;
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $fd: column,
+      $gap: 20px
+    );
+
+    .bannerContent {
+      @include variables.d-flex(
+        $al: center,
+        $jc: center,
+        $fd: column,
+        $gap: 16px
+      );
+
+      .bannerHeading {
+        @include variables.font-style($fs: 34px, $fw: 700, $lh: 44px);
+        max-width: 70%;
+        text-align: center;
+      }
+
+      .bannerDetail {
+        @include variables.font-style($fs: 16px, $fw: 400, $lh: 160%);
+        max-width: 84%;
+      }
+
+      .bannerButtonContainer {
+        margin-top: 20px;
+      }
+    }
+
+    .bannerImageContainer {
+      .bannerImage {
+        max-width: 375px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .bannerImageContainer {
+    .bannerImage {
+      max-width: 320px !important;
+    }
+  }
+}
