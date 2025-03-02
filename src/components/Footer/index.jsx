@@ -25,7 +25,7 @@ const Footer = () => {
         </Link>
       </div>
       <FadeUp>
-        <h2 className="info">info@dgtly.io</h2>
+        <a href="mailto:info@dgtly.io"className="info">info@dgtly.io</a>
       </FadeUp>
     </div>
   );

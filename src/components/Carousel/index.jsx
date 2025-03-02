@@ -9,7 +9,7 @@ import {
 import FadeUp from "../../hooks/FadeUp";
 
 import profilePhoto from "../../assets/images/ourService/profileImage.svg";
-import arrowImage from "../../assets/images/ourService/arrowImage.png";
+import arrowImage from "../../assets/images/ourService/credilinq.svg";
 
 import rightArrow from "../../assets/images/ourService/rightArrow.svg";
 import leftArrow from "../../assets/images/ourService/leftArrow.svg";

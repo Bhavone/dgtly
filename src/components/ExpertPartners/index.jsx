@@ -23,7 +23,7 @@ const ourService = [
     image: ugurBilen,
     heading: "Ugur Bilen",
     detail:
-      "Ugur is an experienced technology consultant with 15 years of expertise in digital marketing and analytics, conversion rate optimization and digital transformation. He has honed these skills at leading global technology and consulting firms, including Google and Accenture leading regional initiatives.  Adept at identifying customer needs and translating them into innovative solutions, Ugur brings a unique blend of technical expertise and business acumen to deliver impactful outcomes.",
+      "Ugur is an experienced technology consultant with 15 years of expertise in digital marketing and analytics, conversion rate optimisation and digital transformation. He has honed these skills at leading global technology and consulting firms, including Google and Accenture leading regional initiatives.  Adept at identifying customer needs and translating them into innovative solutions, Ugur brings a unique blend of technical expertise and business acumen to deliver impactful outcomes.",
     link: "https://www.linkedin.com/in/ugurbilen"
   }
 ];

@@ -16,7 +16,7 @@ const ourService = [
   {
     id: 1,
     image: conversion,
-    heading: "Conversion Rate Optimization",
+    heading: "Conversion Rate Optimisation",
     question: "Looking to increase conversion rates? ",
     detail:
       "We enhance your website user experience with insights, funnel analysis, speed and performance reviews, and accessibility audits—helping you 10X your conversions be it lead generation or purchase",
@@ -30,7 +30,7 @@ const ourService = [
     question: "Looking to accelerate app growth?",
 
     detail:
-      "Our data-driven approach combines market research, monetization strategies, and expert audits to optimize user journeys, enhance App Store visibility, and create high-performing content—ensuring sustained success",
+      "Our data-driven approach combines market research, monetisation strategies, and expert audits to optimize user journeys, enhance App Store visibility, and create high-performing content—ensuring sustained success",
     gif: appGif
   },
   {

@@ -17,7 +17,7 @@ import "./header.scss";
 const navBar = [
   {
     id: 1,
-    navName: "Conversion Rate Optimization",
+    navName: "Conversion Rate Optimisation",
     image: conversion
   },
   {

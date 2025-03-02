@@ -35,9 +35,8 @@ const AboutUs = () => {
             DGTLY is a strategic consulting agency founded by Bhavna , a
             seasoned digital transformation leader with over{" "}
             <span className="highlight">18+ years or experience</span> at{" "}
-            <span className="highlight">Google, top consulting firms </span>,
-            and
-            <span className="highlight"> leading agencies.</span> Her expertise
+            <span className="highlight">Google</span>, <span className="highlight">top consulting firms</span>,
+            and <span className="highlight"> leading agencies</span>. Her expertise
             in driving digital innovation is complemented by a team or
             specialists in technical consulting, creative and performance
             marketing.
@@ -47,7 +46,7 @@ const AboutUs = () => {
           <p className="aboutContent">
             At DGTLY, we provide expert guidance in {""}
             <span className="highlight">
-              conversion rate optimization, growth consulting, app monetisation,
+              conversion rate optimisation, growth consulting,
             </span>{" "}
             and <span className="highlight">digital strategy </span> across
             <span className="highlight"> diverse industries. </span> Whether
