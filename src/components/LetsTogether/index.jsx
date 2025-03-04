@@ -1,4 +1,6 @@
 import { PopupButton } from "react-calendly";
+import { scheduleLink } from "../../constant/scheduleLink";
+
 import FadeUp from "../../hooks/FadeUp";
 import useScreenMobile from "../../hooks/useScreen";
 import BannerButton from "../BannerButton";
@@ -27,7 +29,7 @@ const LetsTogether = () => {
           <BannerButton />
 
           <PopupButton
-            url="https://calendly.com/tanejbhavna/new-meeting"
+            url={scheduleLink}
             rootElement={document.getElementById("root")}
             text="Click here to schedule!"
             className="child"
@@ -49,7 +51,7 @@ const LetsTogether = () => {
         <BannerButton />
 
         <PopupButton
-          url="https://calendly.com/tanejbhavna/new-meeting"
+          url={scheduleLink}
           rootElement={document.getElementById("root")}
           text="Click here to schedule!"
           className="child"

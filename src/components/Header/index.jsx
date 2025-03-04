@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { PopupButton } from "react-calendly";
+import { scheduleLink } from "../../constant/scheduleLink";
 
 import ScheduleCallButton from "../ScheduleCallButton";
 import useScreenMobile from "../../hooks/useScreen";
@@ -124,7 +125,7 @@ const Header = () => {
             <ScheduleCallButton />
 
             <PopupButton
-              url="https://calendly.com/tanejbhavna/new-meeting"
+              url={scheduleLink}
               rootElement={document.getElementById("root")}
               text="Click here to schedule!"
               className="child"
@@ -170,7 +171,7 @@ const Header = () => {
             <ScheduleCallButton />
 
             <PopupButton
-              url="https://calendly.com/tanejbhavna/new-meeting"
+              url={scheduleLink}
               rootElement={document.getElementById("root")}
               text="Click here to schedule!"
               className="child"
