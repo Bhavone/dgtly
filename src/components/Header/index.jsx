@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { PopupButton } from "react-calendly";
+import { scheduleLink } from "../../constant/scheduleLink";
 
 import ScheduleCallButton from "../ScheduleCallButton";
 import useScreenMobile from "../../hooks/useScreen";
@@ -18,18 +20,18 @@ const navBar = [
   {
     id: 1,
     navName: "Conversion Rate Optimisation",
-    image: conversion
+    image: conversion,
   },
   {
     id: 2,
     navName: "App Growth Consulting",
-    image: appGrowth
+    image: appGrowth,
   },
   {
     id: 3,
     navName: "Digital strategy",
-    image: digitalImage
-  }
+    image: digitalImage,
+  },
 ];
 
 const Header = () => {
@@ -51,7 +53,7 @@ const Header = () => {
     if (menuOpen) {
       setIsVisible(true);
     } else {
-      setTimeout(() => setIsVisible(false), 500); // Matches transition time
+      setTimeout(() => setIsVisible(false), 500);
     }
   }, [menuOpen]);
 
@@ -119,8 +121,15 @@ const Header = () => {
             <img src={menuOpen ? closeIcon : hamburger} alt="menuIcon" />
           </div>
         ) : (
-          <div>
+          <div className="ButtonContainer">
             <ScheduleCallButton />
+
+            <PopupButton
+              url={scheduleLink}
+              rootElement={document.getElementById("root")}
+              text="Click here to schedule!"
+              className="child"
+            />
           </div>
         )}
       </div>
@@ -157,7 +166,17 @@ const Header = () => {
 
             <li>Contact Us </li>
           </ul>
-          <ScheduleCallButton />
+
+          <div className="ButtonContainer">
+            <ScheduleCallButton />
+
+            <PopupButton
+              url={scheduleLink}
+              rootElement={document.getElementById("root")}
+              text="Click here to schedule!"
+              className="child"
+            />
+          </div>
         </div>
       ) : (
         ""

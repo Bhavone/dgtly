@@ -4,7 +4,7 @@ Project Name : DGTLY
 
 - Clone Repository: `git clone HTTPS/SSH Url` - Move to root directory: `cd projectx_frontend` - Install dependency: npm install
 - Starting Project: npm run dev
-- Open link in browser: http://localhost:3000/ ## Folder Structure
+- Open link in browser: http://localhost:5173/ ## Folder Structure
   projectx_frontend │
   │
   └───assets

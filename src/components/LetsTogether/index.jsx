@@ -1,3 +1,6 @@
+import { PopupButton } from "react-calendly";
+import { scheduleLink } from "../../constant/scheduleLink";
+
 import FadeUp from "../../hooks/FadeUp";
 import useScreenMobile from "../../hooks/useScreen";
 import BannerButton from "../BannerButton";
@@ -22,7 +25,16 @@ const LetsTogether = () => {
       </div>
       <div className="letsButton">
         {/* <img className="backgroundImage" src={letsBackground} alt="" /> */}
-        <BannerButton />
+        <div className="ButtonContainer">
+          <BannerButton />
+
+          <PopupButton
+            url={scheduleLink}
+            rootElement={document.getElementById("root")}
+            text="Click here to schedule!"
+            className="child"
+          />
+        </div>
       </div>
     </>
   ) : (
@@ -35,8 +47,15 @@ const LetsTogether = () => {
         </FadeUp>
         {/* <p className="letsDetail">Fast Track Your Design Led Innovation</p> */}
       </div>
-      <div>
+      <div className="ButtonContainer">
         <BannerButton />
+
+        <PopupButton
+          url={scheduleLink}
+          rootElement={document.getElementById("root")}
+          text="Click here to schedule!"
+          className="child"
+        />
       </div>
     </div>
   );
