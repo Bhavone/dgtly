@@ -7,7 +7,7 @@ import star from "../../assets/images/aboutUs/star.svg";
 
 import "./digitalThreeStep.scss";
 
-const DigitalStep = ({
+const DigitalThreeStep = ({
   ourService,
   minHeight,
   modifyClass = "",
@@ -61,7 +61,7 @@ const DigitalStep = ({
                     </FadeUp>
                     <p className="cardDetail ">{item?.detail1}</p>
                     <div className="subHeadingBenefit">
-                      {item?.list.map((item, index) => (
+                      {item?.headingList.map((item, index) => (
                         <FadeUp key={index}>
                           <p>
                             <img src={star} alt="" />
@@ -108,4 +108,4 @@ const DigitalStep = ({
   );
 };
 
-export default DigitalStep;
+export default DigitalThreeStep;

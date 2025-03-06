@@ -34,6 +34,7 @@ const navBar = [
     id: 3,
     navName: "Digital strategy",
     image: digitalImage,
+    link: "/digital"
   },
 ];
 
