@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 import "./styles/common.scss";
 import Digital from "./containers/Digital";
+import ContactUs from "./containers/ContactUs";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/conversion" element={<Conversion />} />
         <Route path="/app-growth" element={<AppGrowth />} />
         <Route path="/digital" element={<Digital />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </>
