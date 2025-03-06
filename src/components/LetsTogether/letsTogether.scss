@@ -9,6 +9,8 @@
   background-position: right;
 
   .letsContent {
+    width: 61.8%;
+    @include variables.d-flex($fd:column,$gap:24px);
     .letsHeading {
       text-align: start;
     }
@@ -22,6 +24,9 @@
       line-height: 150%;
       /* 30px */
       letter-spacing: -0.2px;
+      .highLight{
+        color: variables.$black-color-4;
+      }
     }
   }
 }
@@ -62,6 +67,9 @@
       line-height: 150%;
       /* 24px */
       letter-spacing: -0.16px;
+      .highLight{
+        color: variables.$black-color-4;
+      }
     }
   }
 }

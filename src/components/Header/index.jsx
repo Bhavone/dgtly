@@ -34,6 +34,7 @@ const navBar = [
     id: 3,
     navName: "Digital strategy",
     image: digitalImage,
+    link: "/digital",
   },
 ];
 
@@ -127,7 +128,9 @@ const Header = () => {
                 ""
               )}
             </li>
-            <li>Contact Us </li>
+            <Link to="/contact-us">
+              <li>Contact Us </li>
+            </Link>
           </ul>
         )}
 
@@ -178,9 +181,8 @@ const Header = () => {
                           onClick={() => {
                             setIsVisible(false);
                             setMenuOpen(false);
-                              window.scrollTo({ top: 0 });
+                            window.scrollTo({ top: 0 });
                           }}
-                         
                         >
                           <h5 className="navDetailslink">
                             <img src={item?.image} alt="" />
