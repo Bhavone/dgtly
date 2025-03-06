@@ -15,17 +15,20 @@ import conversion from "../../assets/images/header/conversionHeader.svg";
 import rightArrow from "../../assets/images/header/rightArrow.svg";
 
 import "./header.scss";
+import { Link } from "react-router-dom";
 
 const navBar = [
   {
     id: 1,
     navName: "Conversion Rate Optimisation",
     image: conversion,
+    link: "/conversion",
   },
   {
     id: 2,
     navName: "App Growth Consulting",
     image: appGrowth,
+    link: "/app-growth",
   },
   {
     id: 3,
@@ -35,7 +38,7 @@ const navBar = [
 ];
 
 const Header = () => {
-  const isMobile = useScreenMobile({ size: 700 });
+  const isMobile = useScreenMobile({ size: 768 });
   const [menuOpen, setMenuOpen] = useState(false);
   const [onHover, setOnHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,11 +60,20 @@ const Header = () => {
     }
   }, [menuOpen]);
 
+  console.log(isVisible, "isVisible");
+
   return (
     <>
       <div className="container headerContainer">
         <div>
-          <img className="websiteLogo" src={websiteLogo} alt="websiteLogo" />
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0 });
+            }}
+          >
+            <img className="websiteLogo" src={websiteLogo} alt="websiteLogo" />
+          </Link>
         </div>
         {!isMobile && (
           <ul className="navContent">
@@ -93,13 +105,21 @@ const Header = () => {
                     }}
                   >
                     {navBar?.map((item, index) => (
-                      <div key={index} className="navDetails">
-                        <h5 className="navDetailslink">
-                          <img src={item?.image} alt="" />
-                          {item?.navName}
-                        </h5>
-                        <img src={rightArrow} alt="" />
-                      </div>
+                      <Link
+                        key={index}
+                        to={item.link}
+                        onClick={() => {
+                          window.scrollTo({ top: 0 });
+                        }}
+                      >
+                        <div className="navDetails">
+                          <h5 className="navDetailslink">
+                            <img src={item?.image} alt="" />
+                            {item?.navName}
+                          </h5>
+                          <img src={rightArrow} alt="" />
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -151,13 +171,24 @@ const Header = () => {
                 <div className={`navWrapper ${onHover ? "show" : ""}`}>
                   <div className="navHoverContent">
                     {navBar?.map((item, index) => (
-                      <div key={index} className="navDetails">
-                        <h5 className="navDetailslink">
-                          <img src={item?.image} alt="" />
-                          {item?.navName}
-                        </h5>
-                        <img src={rightArrow} alt="" />
-                      </div>
+                      <Link key={index} to={item.link}>
+                        <div
+                          key={index}
+                          className="navDetails"
+                          onClick={() => {
+                            setIsVisible(false);
+                            setMenuOpen(false);
+                              window.scrollTo({ top: 0 });
+                          }}
+                         
+                        >
+                          <h5 className="navDetailslink">
+                            <img src={item?.image} alt="" />
+                            {item?.navName}
+                          </h5>
+                          <img src={rightArrow} alt="" />
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 </div>

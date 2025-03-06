@@ -1,0 +1,167 @@
+@use "/src/styles/variables.scss" as variables;
+
+.conversionBannerContainer {
+
+    padding: 100px 80px;
+    padding-top: 180px;
+    @include variables.d-flex($al: center, $jc: space-between);
+    background: variables.$white-color-1;
+    background-image: url("../../assets//images/banner/bannerBackground.png");
+    background-repeat: no-repeat;
+    background-position: center top 80px;
+
+
+    .bannerContent {
+        @include variables.d-flex($al: flex-start,
+            $jc: flex-start,
+            $fd: column,
+            $gap: 8px);
+
+        .bannerHeading {
+            color: variables.$black-color-1;
+            @include variables.font-style($fs: 58px, $fw: 700, $lh: 76px);
+            text-transform: capitalize;
+            max-width: 70%;
+            padding-bottom: 16px;
+        }
+
+        .bannerSubHeading {
+            color: variables.$grey-color-4;
+            @include variables.font-style($fs: 22px, $fw: 700, $lh: 35.2px);
+            max-width: 82%;
+        }
+
+        .bannerDetail {
+            color: variables.$grey-color-4;
+            @include variables.font-style($fs: 20px, $fw: 400, $lh: 160%);
+            max-width: 82%;
+        }
+
+        .ButtonContainer {
+            position: relative;
+
+            .child {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                opacity: 0;
+            }
+        }
+
+        .bannerButtonContainer {
+            margin-top: 24px;
+        }
+    }
+
+    .bannerImageContainer {
+        .bannerImage {
+            max-width: 668px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .conversionBannerContainer {
+        background-image: none;
+        padding: 60px 80px;
+        padding-top: 139px;
+        @include variables.d-flex($al: center,
+            $jc: space-between,
+            $fd: column,
+            $gap: 40px);
+
+        .bannerContent {
+            @include variables.d-flex($al: center,
+                $jc: center,
+                $fd: column,
+                $gap: 8px);
+            padding-bottom: 16px;
+
+
+            .bannerHeading {
+                color: variables.$black-color-1;
+                @include variables.font-style($fs: 32px, $fw: 700, $lh: 44px);
+
+                text-align: center;
+            }
+
+            .bannerSubHeading {
+                color: variables.$grey-color-4;
+                @include variables.font-style($fs: 22px, $fw: 700, $lh: 35.2px);
+                max-width: 70%;
+                text-align: center;
+            }
+
+            .bannerDetail {
+                max-width: 84%;
+                text-align: center;
+            }
+
+            .bannerButtonContainer {
+                margin-top: 24px;
+            }
+        }
+
+        .bannerImageContainer {
+            .bannerImage {
+                max-width: 651px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .conversionBannerContainer {
+        padding: 40px 18px;
+        padding-top: 119px;
+        @include variables.d-flex($al: center,
+            $jc: space-between,
+            $fd: column,
+            $gap: 20px);
+
+        .bannerContent {
+            @include variables.d-flex($al: center,
+                $jc: center,
+                $fd: column,
+                $gap: 16px);
+
+            .bannerHeading {
+                padding-bottom: 0;
+                @include variables.font-style($fs: 34px, $fw: 700, $lh: 44px);
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .bannerSubHeading {
+                @include variables.font-style($fs: 18px, $fw: 700, $lh: 28.2px);
+                max-width: 88%;
+                text-align: center;
+            }
+
+            .bannerDetail {
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 160%);
+                max-width: 88%;
+            }
+
+            .bannerButtonContainer {
+                margin-top: 20px;
+            }
+        }
+
+        .bannerImageContainer {
+            .bannerImage {
+                max-width: 240px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .bannerImageContainer {
+        .bannerImage {
+            max-width: 240px !important;
+        }
+    }
+}

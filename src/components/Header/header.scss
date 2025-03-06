@@ -51,27 +51,34 @@
         padding: 18px;
         background: #fff;
 
-        .navDetails {
-          padding-bottom: 20px;
-          border-bottom: 1px solid #ebedf0;
-          @include variables.d-flex($al: center,
-            $jc: space-between,
-            $gap: 16px);
+        a {
           width: 100%;
 
-          .navDetailslink {
+          .navDetails {
             cursor: pointer;
-
-            img {
-              max-width: 40px;
-            }
-
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ebedf0;
             @include variables.d-flex($al: center,
               $jc: space-between,
               $gap: 16px);
-            white-space: nowrap;
-            @include variables.font-style($fs: 14px, $fw: 500, $lh: 150%);
-            color: #000;
+            width: 100%;
+
+            .navDetailslink {
+              cursor: pointer;
+
+              img {
+                cursor: pointer;
+                max-width: 40px;
+              }
+
+              @include variables.d-flex($al: center,
+                $jc: space-between,
+                $gap: 16px);
+              white-space: nowrap;
+              @include variables.font-style($fs: 14px, $fw: 500, $lh: 150%);
+              color: #000;
+            }
           }
         }
 
@@ -103,7 +110,7 @@
   }
 }
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 992px) {
   .headerContainer {
     padding: 17px 18px;
 

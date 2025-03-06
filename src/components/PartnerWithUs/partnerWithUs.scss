@@ -1,0 +1,60 @@
+@use "/src/styles/variables.scss" as variables;
+
+.partnerWithUsContainer {
+    padding: 80px 100px;
+    @include variables.d-flex($al: center, $jc: space-between, $gap: 56px, $fd: column);
+
+    .partnerDetail {
+        max-width: 1010px;
+
+        .partnerContent {
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 170%);
+            color: variables.$black-color-2;
+            text-align: center;
+        }
+
+        .partnerContentDetail {
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 170%);
+            color: variables.$black-color-2;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width : 992px) {
+    .partnerWithUsContainer {
+        padding: 60px 80px;
+    }
+}
+
+@media screen and (max-width : 568px) {
+    .partnerWithUsContainer {
+        padding: 40px 18px;
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 40px, $fd: column);
+
+        .partnerDetail {
+            max-width: 1010px;
+
+            .partnerContent {
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 170%);
+                color: variables.$black-color-2;
+                text-align: center;
+            }
+
+            .partnerContentDetail {
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 170%);
+                color: variables.$black-color-2;
+                text-align: center;
+                width: 100%;
+                text-align: center;
+                padding-top: 30px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,154 @@
+@use "/src/styles/variables.scss" as variables;
+
+.fintechClientContainer {
+    padding: 100px;
+    @include variables.d-flex($al: center,
+        $jc: space-between,
+        $gap: 56px,
+        $fd: column);
+
+    .conversionHeading {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .cardsContainer {
+        @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 24px);
+
+        .cardContent {
+            width: 33%;
+            @include variables.d-flex($al: flex-start, $jc: flex-start, $fd: column, $gap: 16px);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid variables.$blue-color-2;
+            background: variables.$white-color-1;
+            min-height: 345px;
+
+
+            .cardHeading {
+                @include variables.font-style($fs: 22px, $fw: 700, $lh: 150%);
+                color: variables.$black-color-2;
+
+            }
+
+            .cardDetail {
+
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+                color: variables.$black-color-3;
+
+            }
+
+            .listContainer {
+                @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 16px, $fd: column);
+
+                .listItem {
+                    @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 7px);
+                }
+            }
+        }
+
+        .cardContent {
+            min-height: 377px;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .fintechClientContainer {
+        padding: 40px;
+        @include variables.d-flex($al: center,
+            $jc: space-between,
+            $gap: 56px,
+            $fd: column);
+
+        .conversionHeading {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .cardsContainer {
+
+            @include variables.d-flex($al: flex-start, $jc: space-between, $fd: column, $gap: 24px);
+
+            .cardContent {
+                width: 100%;
+                min-height: 0 !important;
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $fd: column, $gap: 16px);
+                border-radius: 12px;
+                padding: 24px;
+                border: 1px solid variables.$blue-color-2;
+                background: variables.$white-color-1;
+
+
+                .cardHeading {
+                    @include variables.font-style($fs: 22px, $fw: 700, $lh: 150%);
+                    color: variables.$black-color-2;
+
+                }
+
+                .cardDetail {
+
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+                    color: variables.$black-color-2;
+
+                }
+
+                .listContainer {
+                    .listItem {
+                        @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 8px);
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .fintechClientContainer {
+        padding: 40px 18px;
+        @include variables.d-flex($al: center,
+            $jc: space-between,
+            $gap: 56px,
+            $fd: column);
+
+        .conversionHeading {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .cardsContainer {
+            @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 24px, $fd: column);
+
+            .cardContent {
+                width: 100%;
+                min-height: 0;
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $fd: column, $gap: 16px);
+                border-radius: 12px;
+                padding: 24px;
+                border: 1px solid variables.$blue-color-2;
+                background: variables.$white-color-1;
+
+
+                .cardHeading {
+                    @include variables.font-style($fs: 22px, $fw: 700, $lh: 150%);
+                    color: variables.$black-color-2;
+
+                }
+
+                .cardDetail {
+
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+                    color: variables.$black-color-2;
+
+                }
+            }
+
+
+        }
+    }
+}
