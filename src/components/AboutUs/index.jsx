@@ -13,7 +13,7 @@ const certified = [
   "Startup Mentor",
   "UX Curriculum for Skills Ignition (Google led initiative)",
   "Industry Speaker Digital Marketing World Forum, Google UX days, Skills Ignition launch",
-  "Guest lecturer on UX / Design Thinking General Assembly"
+  "Guest lecturer on UX / Design Thinking General Assembly",
 ];
 
 const AboutUs = () => {
@@ -23,7 +23,13 @@ const AboutUs = () => {
       {isMobile ? <h4 className="commonHeading">About Us</h4> : ""}
       <div className="aboutImageContainer">
         <img src={aboutImage} alt="" />
-        <Link to="https://www.linkedin.com/in/bhavnaone/" target="_blank">
+        <Link
+          to="https://www.linkedin.com/in/bhavnaone/"
+          target="_blank"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           <img src={linkedIn} alt="" />
         </Link>
       </div>
@@ -35,8 +41,9 @@ const AboutUs = () => {
             DGTLY is a strategic consulting agency founded by Bhavna , a
             seasoned digital transformation leader with over{" "}
             <span className="highlight">18+ years or experience</span> at{" "}
-            <span className="highlight">Google</span>, <span className="highlight">top consulting firms</span>,
-            and <span className="highlight"> leading agencies</span>. Her expertise
+            <span className="highlight">Google</span>,{" "}
+            <span className="highlight">top consulting firms</span>, and{" "}
+            <span className="highlight"> leading agencies</span>. Her expertise
             in driving digital innovation is complemented by a team or
             specialists in technical consulting, creative and performance
             marketing.

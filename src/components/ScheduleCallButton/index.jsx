@@ -4,7 +4,7 @@ import "./scheduleCallButton.scss";
 const ScheduleCallButton = ({ onclick = () => {} }) => {
   return (
     <div className="container buttonContainer" onClick={onclick}>
-      <div className="scheduleCallButton">Schedule a Call</div>
+      <div className="scheduleCallButton">Schedule a free call</div>
     </div>
   );
 };

@@ -11,11 +11,24 @@ const Footer = () => {
     <div className="container footerContainer">
       <div className="footerContent">
         <div className="footerData">
-          <img src={websiteLogo} alt="websiteLogo" />
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0 });
+            }}
+          >
+            <img src={websiteLogo} alt="websiteLogo" />
+          </Link>
 
           {/* <p>Fast track your design innovation</p> */}
         </div>
-        <Link to="https://www.linkedin.com/company/105938190" target="_blank">
+        <Link
+          to="https://www.linkedin.com/company/105938190"
+          target="_blank"
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           <FadeUp>
             <h4 className="footerLinkedIn">
               <img src={linkedInFooter} alt="" />
@@ -25,7 +38,9 @@ const Footer = () => {
         </Link>
       </div>
       <FadeUp>
-        <a href="mailto:info@dgtly.io"className="info">info@dgtly.io</a>
+        <a href="mailto:info@dgtly.io" className="info">
+          info@dgtly.io
+        </a>
       </FadeUp>
     </div>
   );

@@ -11,6 +11,7 @@ import appGif from "../../assets/gifs/app.gif";
 import conversionGif from "../../assets/gifs/conversion.gif";
 
 import "./ourService.scss";
+import { Link } from "react-router-dom";
 
 const ourService = [
   {
@@ -20,7 +21,8 @@ const ourService = [
     question: "Looking to increase conversion rates? ",
     detail:
       "We enhance your website user experience with insights, funnel analysis, speed and performance reviews, and accessibility audits—helping you 10X your conversions be it lead generation or purchase",
-    gif: conversionGif
+    gif: conversionGif,
+    link: "/conversion",
   },
 
   {
@@ -31,7 +33,8 @@ const ourService = [
 
     detail:
       "Our data-driven approach combines market research, monetisation strategies, and expert audits to optimize user journeys, enhance App Store visibility, and create high-performing content—ensuring sustained success",
-    gif: appGif
+    gif: appGif,
+    link: "/app-growth",
   },
   {
     id: 3,
@@ -41,8 +44,8 @@ const ourService = [
     detail:
       "Leverage our human-centered design sprint to build your product together with a marketing and launch strategy to maximize ROI",
 
-    gif: digitalGif
-  }
+    gif: digitalGif,
+  },
 ];
 
 const OurService = () => {
@@ -64,46 +67,53 @@ const OurService = () => {
       <div className="cardsContainer">
         {ourService.map((item, index) => (
           <div className="cardWrapper" key={index}>
-            <div
-              className="card"
-              onMouseEnter={() => handleMouseEnter(item.id)}
-              onMouseLeave={() => handleMouseLeave(item.id)}
-              style={{
-                background: hoverStates[item.id] ? "#ECF2FA" : ""
+            <Link
+              to={item?.link}
+              onClick={() => {
+                window.scrollTo({ top: 0 });
               }}
             >
-              <div className="cardDetailContainer">
-                <img
-                  src={hoverStates[item.id] ? item.gif : item.image}
-                  alt="cardImage"
-                  className="cardImage"
-                />
-                <div className="cardContent">
-                  <div className="cardHeadingContainer">
+              <div
+                className="card"
+                onMouseEnter={() => handleMouseEnter(item.id)}
+                onMouseLeave={() => handleMouseLeave(item.id)}
+                style={{
+                  background: hoverStates[item.id] ? "#ECF2FA" : "",
+                }}
+              >
+                <div className="cardDetailContainer">
+                  <img
+                    src={hoverStates[item.id] ? item.gif : item.image}
+                    alt="cardImage"
+                    className="cardImage"
+                  />
+                  <div className="cardContent">
+                    <div className="cardHeadingContainer">
+                      <FadeUp>
+                        <h5 className="cardHeading">{item.heading}</h5>
+                      </FadeUp>
+                      <FadeUp>
+                        <p className="cardQuestion">{item?.question}</p>
+                      </FadeUp>
+                    </div>
                     <FadeUp>
-                      <h5 className="cardHeading">{item.heading}</h5>
-                    </FadeUp>
-                    <FadeUp>
-                      <p className="cardQuestion">{item?.question}</p>
+                      <p
+                        className="cardDetail"
+                        style={{ paddingBottom: item.paddingBottom }}
+                      >
+                        {item.detail}
+                      </p>
                     </FadeUp>
                   </div>
-                  <FadeUp>
-                    <p
-                      className="cardDetail"
-                      style={{ paddingBottom: item.paddingBottom }}
-                    >
-                      {item.detail}
-                    </p>
-                  </FadeUp>
                 </div>
+                <FadeUp>
+                  <p className="learnMore">
+                    Learn more
+                    <img src={upArrow} alt="" />
+                  </p>
+                </FadeUp>
               </div>
-              <FadeUp>
-                <p className="learnMore">
-                  Learn more
-                  <img src={upArrow} alt="" />
-                </p>
-              </FadeUp>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
