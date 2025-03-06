@@ -47,7 +47,8 @@
               color: variables.$grey-color-3;
             }
 
-            input {
+            input,
+            textarea {
               @include variables.font-style($fs: 14px, $fw: 500, $lh: 16px);
               color: variables.$black-color-1;
               width: 100%;
@@ -62,12 +63,20 @@
                 color: variables.$grey-color-7;
               }
             }
+            textarea {
+              resize: none;
+            }
 
-            .error{
+            .error {
               position: absolute;
               @include variables.font-style($fs: 14px, $fw: 400, $lh: 16px);
-              color: red ;
+              color: red;
               bottom: -32%;
+            }
+          }
+          .message{
+            .error{
+              bottom: -22%;
             }
           }
         }
@@ -87,43 +96,41 @@
   }
 }
 
-@media screen and (max-width: 992px){
-  .contactFormSection{
-    .contactFormContainer{
+@media screen and (max-width: 992px) {
+  .contactFormSection {
+    .contactFormContainer {
       padding: 180px 40px 100px 40px;
     }
   }
 }
 
-@media screen and (max-width: 568px){
-  .contactFormSection{
-    .contactFormContainer{
+@media screen and (max-width: 568px) {
+  .contactFormSection {
+    .contactFormContainer {
       padding: 104px 18px 40px 18px;
       flex-direction: column;
       gap: 40px;
 
-      .contactContent{
+      .contactContent {
         width: 100%;
 
-        .contactHeader{
+        .contactHeader {
           @include variables.font-style($fs: 34px, $fw: 700, $lh: 44px);
           text-align: center;
-
         }
-        .contactDescription{
+        .contactDescription {
           @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
           text-align: center;
-
         }
       }
 
-      .formSection{
+      .formSection {
         width: 100%;
 
-        .form{
-          .submitSection{
+        .form {
+          .submitSection {
             width: 100%;
-            .submitButton{
+            .submitButton {
               width: 100%;
             }
           }
