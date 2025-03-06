@@ -1,5 +1,6 @@
 import conversionBannerImage from "../assets/images/banner/conversion.png";
 import optimizationBannerImage from "../assets/images/banner/optimizationBanner.png";
+import digitalBannerImage from "../assets/images/banner/digital.png";
 // import conversionBannerGif from "/Users/sketchbrahma/Desktop/dgtly/src/assets/gifs/conversionBanner.gif";
 
 export const conversionBanner = {
@@ -18,4 +19,9 @@ export const appGrowthBanner = {
   detail:
     "At DGTLY.IO, we offer comprehensive App Growth & Monetization Consulting Services designed to enhance your app's experience, increase engagement, and drive revenue growth. Our approach integrates a highly successful Growth Framework we build which uses in-depth UX audits with strategic growth initiatives to ensure your app not only meets but exceeds user expectations.🚀",
   bannerImage: optimizationBannerImage,
+};
+
+export const digitalBanner = {
+  heading: "Design, Launch & Scale",
+  bannerImage: digitalBannerImage
 };

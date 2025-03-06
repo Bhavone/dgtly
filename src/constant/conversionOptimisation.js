@@ -6,6 +6,15 @@ import dataDrivenGif from "../assets/gifs/dataDriven.gif";
 import croGif from "../assets/gifs/cro.gif";
 import landingPageGif from "../assets/gifs/landingPage.gif";
 
+// digital page assets
+import product from "../assets/images/digital/product.svg";
+import market from "../assets/images/digital/market.svg";
+import growth from "../assets/images/digital/growth.svg";
+
+import producGif from "../assets/gifs/product.gif";
+import marketGif from "../assets/gifs/market.gif";
+import growthGif from "../assets/gifs/market.gif";
+
 export const conversionOptimisationData = {
   title: "Our 3 Step Conversion Rate Optimisation Framework",
   step: [
@@ -52,6 +61,25 @@ export const conversionOptimisationData = {
       subHeading: "Here's how the CRO recommendations benefit you:",
       list: [
         "By refining your landing pages, checkout flows, and user journeys, we help you unlock higher revenue and better ROI—without increasing ad spend.",
+      ],
+    },
+  ],
+};
+
+export const digitalOptimisationData = {
+  title: "Our 3-Step Product Launch & Growth Framework",
+  step: [
+    {
+      id: 1,
+      image: product,
+      heading: "Product Development",
+      detail1:
+        "We collaborate with your team to rapidly prototype, test, and refine your product using human-centered design principles.",
+      gif: producGif,
+      subHeading: "Why This Matters:",
+      list: [
+        "Ensures you build what your users actually need.",
+        "Saves time and resources by validating ideas before launch.",
       ],
     },
   ],

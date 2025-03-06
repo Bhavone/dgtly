@@ -1,0 +1,299 @@
+@use "/src/styles/variables.scss" as variables;
+
+.digitalThreeStepContainer {
+  padding: 100px;
+  @include variables.d-flex(
+    $al: center,
+    $jc: space-between,
+    $gap: 56px,
+    $fd: column
+  );
+
+  .conversionHeading {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .cardsContainer {
+    @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 24px);
+
+    .cardWrapper {
+      background: linear-gradient(
+        45deg,
+        rgba(155, 186, 248, 1) 0%,
+        rgba(228, 237, 253, 1) 50%,
+        rgba(162, 183, 226, 1) 100%
+      );
+      width: 100%;
+      border-radius: 12px;
+      padding: 1px;
+
+      .card {
+        background-color: #fff;
+
+        min-height: 710px;
+        cursor: pointer;
+        width: 33%;
+        border-radius: 12px;
+        padding: 24px;
+        @include variables.d-flex(
+          $al: flex-start,
+          $jc: space-between,
+          $gap: 28px,
+          $fd: column
+        );
+        width: 100%;
+
+        .cardDetailContainer {
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: space-between,
+            $gap: 28px,
+            $fd: column
+          );
+
+          .imageWrapper {
+            overflow: hidden;
+
+            img {
+              transform: scale(1.01);
+            }
+          }
+        }
+
+        .cardImage {
+          min-height: 64px;
+          min-width: 64px;
+        }
+
+        img {
+          max-width: 64px;
+        }
+
+        .cardContent {
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: flex-start,
+            $gap: 6px,
+            $fd: column
+          );
+
+          .cardHeadingContainer {
+            border-bottom: 1px solid #9bbaf8;
+            min-height: 274px;
+            // max-height: 232px;
+            position: relative;
+            @include variables.d-flex(
+              $al: flex-start,
+              $jc: flex-start,
+              $gap: 10px,
+              $fd: column
+            );
+
+            .subHeadingBenefit {
+              @include variables.d-flex(
+                $al: flex-start,
+                $jc: space-between,
+                $gap: 7px,
+                $fd: column
+              );
+
+              p {
+                @include variables.d-flex(
+                  $al: flex-start,
+                  $jc: space-between,
+                  $gap: 8px
+                );
+                color: variables.$grey-color-3;
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+
+                img {
+                  padding-top: 8px;
+                }
+              }
+            }
+          }
+
+          .cardDetailMinHeight {
+            min-height: 300px;
+            max-height: 300px;
+            position: relative;
+          }
+
+          .cardHeading {
+            @include variables.font-style($fs: 22px, $fw: 700, $lh: 150%);
+            color: variables.$black-color-2;
+          }
+
+          .cardQuestion {
+            @include variables.font-style($fs: 16px, $fw: 550, $lh: 150%);
+            color: variables.$black-color-2;
+          }
+
+          .cardDetail {
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+            color: variables.$grey-color-3;
+          }
+
+          .cardDetailSecond {
+            padding-bottom: 28px;
+          }
+
+          .borderLine {
+            height: 1px;
+            width: 100%;
+            background: #9bbaf8;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+
+        .subHeadingContainer {
+          padding-top: 28px;
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: space-between,
+            $gap: 16px,
+            $fd: column
+          );
+
+          .subHeadingBenefit {
+            @include variables.d-flex(
+              $al: flex-start,
+              $jc: space-between,
+              $gap: 7px,
+              $fd: column
+            );
+
+            p {
+              @include variables.d-flex(
+                $al: flex-start,
+                $jc: space-between,
+                $gap: 8px
+              );
+              color: variables.$grey-color-3;
+              @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+
+              img {
+                padding-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .digitalThreeStepContainer {
+    padding: 40px;
+
+    .cardsContainer {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $gap: 24px
+      );
+      flex-direction: column;
+
+      .card {
+        min-height: 0 !important;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .cardContent {
+        @include variables.d-flex(
+          $al: flex-start,
+          $jc: flex-start,
+          $gap: 10px,
+          $fd: column
+        );
+
+        .cardHeadingContainer {
+          min-height: 226px !important;
+          max-height: 200px !important;
+          position: relative;
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: flex-start,
+            $gap: 10px,
+            $fd: column
+          );
+        }
+
+        .cardDetailMinHeight {
+          min-height: 0 !important;
+
+          position: relative;
+        }
+
+        .cardHeading {
+          @include variables.font-style($fs: 18px, $fw: 700, $lh: 150%);
+          color: variables.$black-color-2;
+        }
+
+        .cardDetail {
+          @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+          color: variables.$grey-color-3;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .digitalThreeStepContainer {
+    padding: 40px 18px;
+    @include variables.d-flex(
+      $al: center,
+      $jc: space-between,
+      $gap: 40px,
+      $fd: column
+    );
+
+    .conversionHeading {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .cardsContainer {
+      @include variables.d-flex(
+        $al: flex-start,
+        $jc: space-between,
+        $gap: 18px,
+        $fd: column
+      );
+      // min-height: 0px !important;
+
+      .card {
+        width: 100%;
+        // min-height: 0 !important;
+
+        gap: 16px;
+
+        .cardContent {
+          @include variables.d-flex(
+            $al: flex-start,
+            $jc: flex-start,
+            $gap: 10px,
+            $fd: column
+          );
+
+          .cardHeadingContainer {
+            min-height: 270px !important;
+          }
+
+          .cardHeading {
+            @include variables.font-style($fs: 20px, $fw: 700, $lh: 150%);
+          }
+
+          .cardDetail {
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+          }
+        }
+      }
+    }
+  }
+}

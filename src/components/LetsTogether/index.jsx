@@ -7,7 +7,14 @@ import BannerButton from "../BannerButton";
 
 import "./letsTogether.scss";
 
-const LetsTogether = () => {
+const LetsTogether = ({
+  // eslint-disable-next-line
+  title = "Let's work together.",
+  // eslint-disable-next-line
+  isInitialContentNeed = true,
+  // eslint-disable-next-line
+  isDigitalContentNeed = false,
+}) => {
   const isMobile = useScreenMobile({ size: 992 });
 
   return isMobile ? (
@@ -15,11 +22,31 @@ const LetsTogether = () => {
       <div className="container letsTogetherContainerMobile">
         <div className="letsContent">
           <FadeUp>
-            <h4 className="commonHeading letsHeading">
-              Let&apos;s work together.
-            </h4>
+            <h4 className="commonHeading letsHeading">{title}</h4>
           </FadeUp>
 
+          {isInitialContentNeed && (
+            <p className="letsDetail">Fast Track Your Design Led Innovation</p>
+          )}
+
+          {isDigitalContentNeed && (
+            <>
+              <p className="letsDetail">
+                From{" "}
+                <span className="highLight">
+                  design sprints to marketing execution,
+                </span>{" "}
+                we help you build, launch, and scale your product{" "}
+                <span className="highLight">with a high-impact strategy.</span>
+              </p>
+              <p className="letsDetail">
+                <span className="highLight">
+                  Let’s turn your vision into a successful launch.
+                </span>{" "}
+                Get in touch today!
+              </p>
+            </>
+          )}
           {/* <p className="letsDetail">Fast Track Your Design Led Innovation</p> */}
         </div>
       </div>
@@ -42,10 +69,32 @@ const LetsTogether = () => {
       <div className="letsContent">
         <FadeUp>
           <h4 className="commonHeading letsHeading">
-            Let&apos;s work together.
+            {title}
+            {/* {heading} */}
           </h4>
         </FadeUp>
-        {/* <p className="letsDetail">Fast Track Your Design Led Innovation</p> */}
+        {isInitialContentNeed && (
+          <p className="letsDetail">Fast Track Your Design Led Innovation</p>
+        )}
+
+        {isDigitalContentNeed && (
+          <>
+            <p className="letsDetail">
+              From{" "}
+              <span className="highLight">
+                design sprints to marketing execution,
+              </span>{" "}
+              we help you build, launch, and scale your product{" "}
+              <span className="highLight">with a high-impact strategy.</span>
+            </p>
+            <p className="letsDetail">
+              <span className="highLight">
+                Let’s turn your vision into a successful launch.
+              </span>
+              Get in touch today!
+            </p>
+          </>
+        )}
       </div>
       <div className="ButtonContainer">
         <BannerButton />
