@@ -45,6 +45,7 @@ const ourService = [
       "Leverage our human-centered design sprint to build your product together with a marketing and launch strategy to maximize ROI",
 
     gif: digitalGif,
+    link: "/digital"
   },
 ];
 

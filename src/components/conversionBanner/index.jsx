@@ -4,16 +4,21 @@ import useScreenMobile from "../../hooks/useScreen";
 import "./conversionBanner.scss";
 
 const ConversionBanner = ({
+  cipData,
   heading,
   subHeading,
   detail,
   bannerImage,
   headingOverRide,
+  modifyClass =""
 }) => {
   const isMobile = useScreenMobile({ size: 992 });
   return (
-    <div className="container conversionBannerContainer">
+    <div className={`container conversionBannerContainer ${modifyClass}`}>
       <div className="bannerContent">
+        <div className="bannerCip">
+          <p className="bannerCipContent">{cipData}</p>
+        </div>
         <h3
           className="bannerHeading"
           style={{
@@ -22,9 +27,11 @@ const ConversionBanner = ({
         >
           {heading}
         </h3>
-        <p className="bannerSubHeading">{subHeading}</p>
+        <div className="bannerData">
+          <p className="bannerSubHeading">{subHeading}</p>
 
-        <p className="bannerDetail">{detail}</p>
+          <p className="bannerDetail">{detail}</p>
+        </div>
       </div>
       <div className="bannerImageContainer">
         <img

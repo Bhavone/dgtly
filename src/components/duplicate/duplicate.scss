@@ -9,6 +9,11 @@
     $fd: column
   );
 
+  .highlight {
+    color: #2d2d2f;
+    font-weight: 500;
+  }
+
   .conversionHeading {
     max-width: 70%;
     margin: 0 auto;
@@ -100,15 +105,16 @@
                 $fd: column
               );
 
-              p {
+              .listWrapper {
                 @include variables.d-flex(
                   $al: flex-start,
                   $jc: space-between,
                   $gap: 8px
                 );
-                color: variables.$grey-color-3;
-                @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
-
+                p {
+                  color: variables.$grey-color-3;
+                  @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+                }
                 img {
                   padding-top: 8px;
                 }
@@ -167,15 +173,16 @@
               $fd: column
             );
 
-            p {
+            .listWrapper {
               @include variables.d-flex(
                 $al: flex-start,
                 $jc: space-between,
                 $gap: 8px
               );
-              color: variables.$grey-color-3;
-              @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
-
+              p {
+                color: variables.$grey-color-3;
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 150%);
+              }
               img {
                 padding-top: 8px;
               }
@@ -194,9 +201,9 @@
         .card {
           min-height: 785px;
 
-          .cardContent{
-            .cardHeadingContainer{
-                min-height: 452px;
+          .cardContent {
+            .cardHeadingContainer {
+              min-height: 452px;
             }
           }
         }
@@ -250,8 +257,8 @@
             );
 
             .cardHeadingContainer {
-                min-height: 226px ;
-            //   max-height: 200px !important;
+              min-height: 226px;
+              //   max-height: 200px !important;
               position: relative;
               @include variables.d-flex(
                 $al: flex-start,

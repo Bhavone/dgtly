@@ -19,7 +19,7 @@ const certified = [
 const AboutUs = () => {
   const isMobile = useScreenMobile({ size: 992 });
   return (
-    <div className="container aboutContainer">
+    <div className="container aboutContainer" id="aboutUs">
       {isMobile ? <h4 className="commonHeading">About Us</h4> : ""}
       <div className="aboutImageContainer">
         <img src={aboutImage} alt="" />

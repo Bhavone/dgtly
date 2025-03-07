@@ -17,8 +17,6 @@ const ContactForm = () => {
       case "name":
         if (!value.trim()) {
           error = "Full Name is required";
-        } else if (value.trim().length < 5) {
-          error = "Full Name must be at least 5 characters long";
         }
         break;
 

@@ -13,6 +13,7 @@ const AppGrowth = () => {
   return (
     <div className="container ">
       <ConversionBanner
+        cipData={appGrowthBanner?.cipData}
         headingOverRide={true}
         heading={appGrowthBanner?.heading}
         subHeading={appGrowthBanner?.subHeading}

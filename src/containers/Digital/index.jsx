@@ -1,17 +1,18 @@
 import ConversionBanner from "../../components/conversionBanner";
-import DigitalThreeStep from "../../components/DigitalThreeStep";
 import LetsTogether from "../../components/LetsTogether";
 import { digitalBanner } from "../../constant/banner";
-import { digitalOptimisationData } from "../../constant/conversionOptimisation";
+import DigitalThreeSteps from "../../components/duplicate";
 
 const Digital = () => {
   return (
     <>
       <ConversionBanner
+        modifyClass="digitalBanner"
+        cipData={digitalBanner?.cipData}
         heading={digitalBanner?.heading}
         bannerImage={digitalBanner?.bannerImage}
       />
-      <DigitalThreeStep ourService={digitalOptimisationData} />
+      <DigitalThreeSteps />
       <LetsTogether
         title={"Ready to Launch with Confidence?"}
         isInitialContentNeed={false}
