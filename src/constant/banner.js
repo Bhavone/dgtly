@@ -6,7 +6,7 @@ import digitalBannerImage from "../assets/images/banner/digital.png";
 export const conversionBanner = {
   heading: "Maximize Conversions, Maximize Growth",
   subHeading:
-    "Our clients have seen 5X increase in conversions using our 3 step Conversion Rate Framework",
+    "Our clients have seen 10X increase in conversions using our 3 step Conversion Rate Framework",
   detail:
     "Your website is a performance engine, and at DGTLY.IO, we unlock its full potential with data-driven CRO. Through deep user insights, research, and testing, we transform visitors into engaged customers—boosting sign-ups, leads, and sales. 🚀",
   bannerImage: conversionBannerImage,

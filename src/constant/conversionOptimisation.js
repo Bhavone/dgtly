@@ -72,7 +72,7 @@ export const digitalOptimisationData = {
     {
       id: 1,
       image: product,
-      heading: "Product Development",
+      heading: "Product Ideation & Human-Centered Design Sprint",
       detail1:
         "We collaborate with your team to rapidly prototype, test, and refine your product using human-centered design principles.",
       gif: producGif,
