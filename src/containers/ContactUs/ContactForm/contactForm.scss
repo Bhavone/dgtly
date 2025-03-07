@@ -69,7 +69,7 @@
 
             .error {
               position: absolute;
-              @include variables.font-style($fs: 14px, $fw: 400, $lh: 16px);
+              @include variables.font-style($fs: 12px, $fw: 400, $lh: 16px);
               color: red;
               bottom: -32%;
             }

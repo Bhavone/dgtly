@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { PopupButton } from "react-calendly";
 import { scheduleLink } from "../../constant/scheduleLink";
 
 import ScheduleCallButton from "../ScheduleCallButton";
 import useScreenMobile from "../../hooks/useScreen";
 
-import websiteLogo from "../../assets/images/header/websiteLogo.svg";
+// import websiteLogo from "../../assets/images/header/websiteLogo.svg";
+import websiteLogo from "../../assets/images/header/LogoDGTLY.png";
 import dropDown from "../../assets/images/header/dropDownArrow.svg";
 import hamburger from "../../assets/images/header/hamburger.svg";
 import closeIcon from "../../assets/images/header/close.svg";
@@ -15,7 +19,6 @@ import conversion from "../../assets/images/header/conversionHeader.svg";
 import rightArrow from "../../assets/images/header/rightArrow.svg";
 
 import "./header.scss";
-import { Link } from "react-router-dom";
 
 const navBar = [
   {
@@ -44,6 +47,9 @@ const Header = () => {
   const [onHover, setOnHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("no-scroll");
@@ -61,12 +67,31 @@ const Header = () => {
     }
   }, [menuOpen]);
 
-  console.log(isVisible, "isVisible");
+  useEffect(() => {
+    if (location.pathname === "/" && performance.navigation.type !== 1) {
+      const aboutSection = document.getElementById("aboutUs");
+      if (aboutSection) {
+        aboutSection.scrollIntoView();
+      }
+    }
+  }, [location]);
+
+  const handleAboutUs = (e) => {
+    e.preventDefault();
+    navigate("/");
+
+    setTimeout(() => {
+      const aboutSection = document.getElementById("aboutUs");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({behavior: "smooth"});
+      }
+    }, 100);
+  };
 
   return (
     <>
       <div className="container headerContainer">
-        <div>
+        <div className="logoWrapper">
           <Link
             to="/"
             onClick={() => {
@@ -78,7 +103,10 @@ const Header = () => {
         </div>
         {!isMobile && (
           <ul className="navContent">
-            <li>About Us</li>
+            <Link to="/" onClick={handleAboutUs}>
+              <li>About Us</li>
+            </Link>
+
             <li
               onMouseEnter={() => {
                 setOnHover(true);

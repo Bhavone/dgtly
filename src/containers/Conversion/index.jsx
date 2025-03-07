@@ -12,6 +12,7 @@ const Conversion = () => {
   return (
     <div className="container conversionContainer">
       <ConversionBanner
+        cipData={conversionBanner?.cipData}
         heading={conversionBanner?.heading}
         subHeading={conversionBanner?.subHeading}
         detail={conversionBanner?.detail}

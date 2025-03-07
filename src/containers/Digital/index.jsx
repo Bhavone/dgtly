@@ -7,10 +7,12 @@ const Digital = () => {
   return (
     <>
       <ConversionBanner
+        modifyClass="digitalBanner"
+        cipData={digitalBanner?.cipData}
         heading={digitalBanner?.heading}
         bannerImage={digitalBanner?.bannerImage}
       />
-  <DigitalThreeSteps />
+      <DigitalThreeSteps />
       <LetsTogether
         title={"Ready to Launch with Confidence?"}
         isInitialContentNeed={false}
