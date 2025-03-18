@@ -49,9 +49,10 @@ const ContactForm = () => {
       case "phoneNumber":
         if (!value.trim()) {
           error = "Phone Number is required";
-        } else if (!/^\d{10}$/.test(value)) {
-          error = "Enter a valid 10-digit phone number";
-        }
+        } 
+        // else if (!/^\d{10}$/.test(value)) {
+        //   error = "Enter a valid 10-digit phone number";
+        // }
         break;
 
       case "message":
