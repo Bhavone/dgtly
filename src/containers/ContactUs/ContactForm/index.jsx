@@ -105,16 +105,13 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          //   setIsSubmit(!isSubmit);
+          setIsSubmit(true);
           setFormData({ name: "", email: "", phoneNumber: "", message: "" });
           console.log("Form submitted successfully!");
-          setIsSubmit(true);
           setErrors({});
         },
       
       ) .catch(error=>{
-        // setIsSubmit(!isSubmit);
-        // setEmailError("Email Not Sent. Try Again");
         console.log("email error", error)
 
       });
