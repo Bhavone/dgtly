@@ -25,6 +25,16 @@
         $gap: 8px
       );
 
+      .logoWrapper {
+        width: 150px;
+        height: 40px;
+        .websiteLogo {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+      }
+
       p {
         color: variables.$grey-color-0;
         @include variables.font-style($fs: 16px, $fw: 400, $lh: normal);
@@ -69,6 +79,17 @@
           $fd: column,
           $gap: 8px
         );
+
+        .logoWrapper {
+          width: 115px;
+          height: 30px;
+          .websiteLogo {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+        
       }
 
       .footerLinkedIn {
