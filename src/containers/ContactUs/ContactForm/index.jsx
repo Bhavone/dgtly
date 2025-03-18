@@ -108,12 +108,13 @@ const ContactForm = () => {
         () => {
           setIsSubmit(true);
           setFormData({ name: "", email: "", phoneNumber: "", message: "" });
-          console.log("Form submitted successfully!");
+          // console.log("Form submitted successfully!");
           setErrors({});
         },
       
+      // eslint-disable-next-line no-unused-vars
       ) .catch(error=>{
-        console.log("email error", error)
+        // console.log("email error", error)
 
       });
 
