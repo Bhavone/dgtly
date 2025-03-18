@@ -29,9 +29,42 @@
       width: 56.2%;
       background-color: variables.$white-color-0;
       padding: 24px;
+      min-height: 601px;
+      @include variables.d-flex($jc:center,$al:center);
+
+      .submitMsg {
+        width: 394px;
+
+        .submitMsgContainer {
+          @include variables.d-flex($fd: column, $gap: 20px,$jc:center,$al:center);
+
+          .imgSection {
+            @include variables.d-flex($jc: center);
+          }
+
+          .message {
+            @include variables.d-flex($fd: column, $gap: 12px);
+
+            .thankYou {
+              @include variables.font-style($fs: 28px , $fw: 600, $lh: 36px);
+              text-align: center;
+              width: 100%;
+            }
+
+            .thankText {
+              @include variables.font-style($fs: 18px , $fw: 400, $lh: 30px);
+              text-align: center;
+            }
+          }
+          .goBack {
+            @include variables.d-flex($jc: center);
+          }
+        }
+      }
 
       .form {
         @include variables.d-flex($fd: column, $gap: 40px);
+        width: 100%;
 
         .dataSection {
           width: 100%;

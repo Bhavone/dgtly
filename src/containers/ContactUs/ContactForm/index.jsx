@@ -3,7 +3,10 @@ import { useState } from "react";
 
 import emailjs from "@emailjs/browser";
 
+import successIcon from "../../../assets/images/contactUs/successIcon.svg";
+
 import "./contactForm.scss";
+import ScheduleCallButton from "../../../components/ScheduleCallButton";
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -19,6 +22,12 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleGoBack = () => {
+    setIsSubmit(false);
+  }
   const validateField = (name, value) => {
     let error = "";
 
@@ -99,6 +108,7 @@ const ContactForm = () => {
           //   setIsSubmit(!isSubmit);
           setFormData({ name: "", email: "", phoneNumber: "", message: "" });
           console.log("Form submitted successfully!");
+          setIsSubmit(true);
           setErrors({});
         },
       
@@ -134,74 +144,97 @@ const ContactForm = () => {
             </p>
           </div>
           <div className="formSection">
-            <form className="form" onSubmit={handleSubmit} noValidate>
-              <div className="dataSection">
-                <div className="field">
-                  <label htmlFor="name">Full Name*</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="name"
-                    required
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                  {errors.name && <p className="error">{errors.name}</p>}
-                </div>
-                <div className="field">
-                  <label htmlFor="email">Email Id*</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="email"
-                    placeholder="xyz@example.com"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  {errors.email && <p className="error">{errors.email}</p>}
-                </div>
-                <div className="field">
-                  <label htmlFor="phoneNumber">Phone Number*</label>
-                  <input
-                    type="text"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    className="phoneNumber"
-                    placeholder="Enter your mobile number"
-                    required
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                  />
-                  {errors.phoneNumber && (
-                    <p className="error">{errors.phoneNumber}</p>
-                  )}
-                </div>
-                <div className="field message">
-                  <label htmlFor="message">Message*</label>
-                  <textarea
-                    type="text"
-                    id="message"
-                    name="message"
-                    className="message"
-                    placeholder="Please enter a message here"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={3}
-                  />
-                  {errors.message && <p className="error">{errors.message}</p>}
+            {
+              isSubmit ? (
+                <div className="submitMsg">
+                <div className="submitMsgContainer">
+                  <div className="imgSection">
+                    <img src={successIcon} alt="Submit" />
+                  </div>
+                  <div className="message">
+                    <h4 className="thankYou">Thank You!</h4>
+                    <p className="thankText">
+                      Your form has been submitted successfully. Our team will
+                      respond to your inquiry shortly.
+                    </p>
+                  </div>
+                  <div className="goBack">
+                  <ScheduleCallButton buttonText="Go Back" onclick={handleGoBack}/>
+                  </div>
                 </div>
               </div>
-              <div className="submitSection">
-                <button type="submit" className="submitButton">
-                  Submit
-                </button>
-              </div>
-            </form>
+              ) : (
+                <form className="form" onSubmit={handleSubmit} noValidate>
+                <div className="dataSection">
+                  <div className="field">
+                    <label htmlFor="name">Full Name*</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="name"
+                      required
+                      placeholder="Enter your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
+                    {errors.name && <p className="error">{errors.name}</p>}
+                  </div>
+                  <div className="field">
+                    <label htmlFor="email">Email Id*</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="email"
+                      placeholder="xyz@example.com"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    {errors.email && <p className="error">{errors.email}</p>}
+                  </div>
+                  <div className="field">
+                    <label htmlFor="phoneNumber">Phone Number*</label>
+                    <input
+                      type="text"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      className="phoneNumber"
+                      placeholder="Enter your mobile number"
+                      required
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                    />
+                    {errors.phoneNumber && (
+                      <p className="error">{errors.phoneNumber}</p>
+                    )}
+                  </div>
+                  <div className="field message">
+                    <label htmlFor="message">Message*</label>
+                    <textarea
+                      type="text"
+                      id="message"
+                      name="message"
+                      className="message"
+                      placeholder="Please enter a message here"
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={3}
+                    />
+                    {errors.message && <p className="error">{errors.message}</p>}
+                  </div>
+                </div>
+                <div className="submitSection">
+                  <button type="submit" className="submitButton">
+                    Submit
+                  </button>
+                </div>
+              </form>
+              )
+            }
+           
           </div>
         </div>
       </div>
