@@ -1,7 +1,16 @@
 
 import { useState } from "react";
+
+import emailjs from "@emailjs/browser";
+
 import "./contactForm.scss";
+
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const ContactForm = () => {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -70,7 +79,37 @@ const ContactForm = () => {
     setErrors(newErrors);
 
     if (Object.values(newErrors).every((error) => !error)) {
-      console.log("Form submitted successfully!");
+      const templateParams = {
+        from_name: formData.name,
+        name: formData.name,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        message: formData.message,
+      };
+      emailjs
+      .send(
+    
+        serviceId,         
+        templateId,
+        templateParams,
+        publicKey
+      )
+      .then(
+        () => {
+          //   setIsSubmit(!isSubmit);
+          setFormData({ name: "", email: "", phoneNumber: "", message: "" });
+          console.log("Form submitted successfully!");
+          setErrors({});
+        },
+      
+      ) .catch(error=>{
+        // setIsSubmit(!isSubmit);
+        // setEmailError("Email Not Sent. Try Again");
+        console.log("email error", error)
+
+      });
+
+
       setFormData({
         name: "",
         email: "",

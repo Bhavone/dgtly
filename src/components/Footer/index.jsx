@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import FadeUp from "../../hooks/FadeUp";
 
-import websiteLogo from "../../assets/images/header/websiteLogo.svg";
+// import websiteLogo from "../../assets/images/header/websiteLogo.svg";
+import websiteLogo from "../../assets/images/header/LogoDGTLY.png";
 import linkedInFooter from "../../assets/images/aboutUs/linkedInFooter.svg";
 
 import "./footer.scss";
@@ -11,14 +12,16 @@ const Footer = () => {
     <div className="container footerContainer">
       <div className="footerContent">
         <div className="footerData">
-          <Link
-            to="/"
-            onClick={() => {
-              window.scrollTo({ top: 0 });
-            }}
-          >
-            <img src={websiteLogo} alt="websiteLogo" />
-          </Link>
+         <div className="logoWrapper">
+                   <Link
+                     to="/"
+                     onClick={() => {
+                       window.scrollTo({ top: 0 });
+                     }}
+                   >
+                     <img className="websiteLogo" src={websiteLogo} alt="websiteLogo" />
+                   </Link>
+                 </div>
 
           {/* <p>Fast track your design innovation</p> */}
         </div>
