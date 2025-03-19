@@ -51,6 +51,10 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("no-scroll");
     } else {
@@ -67,14 +71,14 @@ const Header = () => {
     }
   }, [menuOpen]);
 
-  useEffect(() => {
-    if (location.pathname === "/" && performance.navigation.type !== 1) {
-      const aboutSection = document.getElementById("aboutUs");
-      if (aboutSection) {
-        aboutSection.scrollIntoView();
-      }
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (location.pathname === "/" && performance.navigation.type !== 1) {
+  //     const aboutSection = document.getElementById("aboutUs");
+  //     if (aboutSection) {
+  //       aboutSection.scrollIntoView();
+  //     }
+  //   }
+  // }, [location]);
 
   const handleAboutUs = (e) => {
     e.preventDefault();
@@ -83,7 +87,7 @@ const Header = () => {
     setTimeout(() => {
       const aboutSection = document.getElementById("aboutUs");
       if (aboutSection) {
-        aboutSection.scrollIntoView({behavior: "smooth"});
+        aboutSection.scrollIntoView({ behavior: "smooth" });
       }
     }, 100);
   };
