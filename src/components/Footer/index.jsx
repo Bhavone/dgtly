@@ -25,7 +25,7 @@ const Footer = () => {
 
           {/* <p>Fast track your design innovation</p> */}
         </div>
-        <Link
+        {/* <Link
           to="https://www.linkedin.com/company/105938190"
           target="_blank"
           onClick={() => {
@@ -38,7 +38,7 @@ const Footer = () => {
               Follow on LinkedIn
             </h4>
           </FadeUp>
-        </Link>
+        </Link> */}
       </div>
       <FadeUp>
         <a href="mailto:info@dgtly.io" className="info">
