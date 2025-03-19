@@ -48,7 +48,7 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -90,6 +90,25 @@ const Header = () => {
         aboutSection.scrollIntoView({ behavior: "smooth" });
       }
     }, 100);
+  };
+
+  const handleAboutUsMobile = (e) => {
+    e.preventDefault();
+    navigate("/");
+    setMenuOpen(false);
+
+    setTimeout(() => {
+      const aboutSection = document.getElementById("aboutUs");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
+  const handleContactUsMobile = () => {
+    navigate("/contact-us");
+    window.scrollTo({ top: 0 });
+    setMenuOpen(false);
   };
 
   return (
@@ -192,7 +211,9 @@ const Header = () => {
       {isMobile ? (
         <div className={`mobileNavOpen ${isVisible ? "show" : ""}`}>
           <ul className="navContent">
-            <li>About Us</li>
+            <li onClick={handleAboutUsMobile}>About Us</li>
+
+            {/* <li>About Us</li> */}
             <div className="services">
               <li onClick={() => setOnHover(!onHover)}>
                 Services
@@ -229,7 +250,13 @@ const Header = () => {
               )}
             </div>
 
-            <li>Contact Us </li>
+            <li
+              onClick={() => {
+                handleContactUsMobile();
+              }}
+            >
+              Contact Us{" "}
+            </li>
           </ul>
 
           <div className="ButtonContainer">
