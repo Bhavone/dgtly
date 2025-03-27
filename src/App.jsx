@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import "./styles/common.scss";
 import Digital from "./containers/Digital";
 import ContactUs from "./containers/ContactUs";
+import Webinar from "./containers/Webinar";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <Route path="/app-growth" element={<AppGrowth />} />
         <Route path="/digital" element={<Digital />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/webinar" element={<Webinar />} />
+
       </Routes>
       <Footer />
     </>
