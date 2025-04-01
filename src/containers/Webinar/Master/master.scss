@@ -125,9 +125,13 @@
         .table{
             .elements{
                 flex-direction: column;
+                .sub-elements{
+                    width: 100%;
+                }
             }
         }
     }
+
     .about{
         .table{
             .elements{
