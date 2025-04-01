@@ -17,13 +17,16 @@ const Solution= () => {
                     <p className="para1">Learn directly from these award-winning UX experts who have empowered leading global organizations. You'll gain actionable strategies, exclusive insights from top-performing apps, and practical tools to instantly enhance user engagement, drive higher conversions, and significantly boost your revenue. Don't miss your chance to transform your web and app experiences into powerful growth engines.</p>
                 </div>
                 <div className="lowerText">
-                    <div className="block">
+                 <div className="element">
+                   <div className="block">
                         <p className="heading">WHO SHOULD ATTEND?</p>
                         <div className="imageAndtext">
                             <img src={Star} alt="" />
                             <p className="para2">CMOs, Heads of Growth, Product Managers, UX Designers Anyone looking to increase app and web conversions, retention, and revenue</p>
                         </div>
                     </div>
+                 </div> 
+                 <div className="element">
                     <div className="block">
                         <p className="heading">WHY SHOULD YOU ATTEND?</p>
                         <div className="imageAndtext">
@@ -31,6 +34,7 @@ const Solution= () => {
                             <p className="para2">The speakers are award-winning experts who have empowered thousands of leading organizations and mentored C-suite executives, industry practitioners, and postgraduate scholars.</p>
                         </div>
                     </div>
+                   </div> 
                 </div>
             </div>
             <div className="timer">

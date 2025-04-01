@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
     }
 }
 .solution{
@@ -40,7 +40,7 @@
         .text{
             .upperText p{
                 color: var(--Secondinary-900, #232325);
-                font-family: "Satoshi";
+                // font-family: "Satoshi";
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 700;
@@ -55,7 +55,7 @@
             .upperText{
                 .para1{
                     color: var(--Secondinary-500, #4F4F52);
-                    font-family: "Satoshi";
+                    // font-family: "Satoshi";
                     font-size: 18px;
                      font-style: normal;
                      font-weight: 400;
@@ -67,7 +67,7 @@
 }
 #name1{
     color: #000;
-    font-family: "Satoshi";
+    // font-family: "Satoshi";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -75,7 +75,7 @@
 }
 #digital{
     color: var(--Brand, #165EF0);
-    font-family: "Satoshi";
+    // font-family: "Satoshi";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -89,7 +89,7 @@
 }
 #name2{
     color: #000;
-    font-family: "Satoshi";
+    // font-family: "Satoshi";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -97,7 +97,7 @@
 }
 #dgtly{
     color: var(--Brand, #165EF0);
-    font-family: "Satoshi";
+    // font-family: "Satoshi";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -116,6 +116,21 @@
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                .element{
+                    padding: 1px;
+                    background: linear-gradient(194deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
+                    border-radius: 12px;
+                    overflow: hidden;
+                }
             }
         }
     }
@@ -125,13 +140,14 @@
         .text{
             .lowerText{
                 .block{
-                    border-radius: 13px;
-                    border: 1px solid #9BBAF8;
-                    background: linear-gradient(99deg, #FBFCFE 18.61%, #FFF 68.77%);
+                    overflow: hidden;
+                    
+                    background: #fff;
                      padding: 24px;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+
                 }
             }
         }
@@ -144,7 +160,7 @@
                 .block{
                     .heading{
                         color: var(--Secondary-Black, #131313);
-                        font-family: "Satoshi";
+                        // font-family: "Satoshi";
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 700;
@@ -180,7 +196,7 @@
                     .imageAndtext{
                          .para2{
                             color: var(--Secondary-Black, #131313);
-                            font-family: "Satoshi";
+                            // font-family: "Satoshi";
                             font-size: 18px;
                             font-style: normal;
                             font-weight: 400;
@@ -197,6 +213,11 @@
     .subSolution{
         .timer{
             flex-basis: 40.9375%;
+            border-radius: 0px 0px 16px 16px;
+            border-right: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
+            border-left: 1px solid #EAEAEA;
+            height: 50%;
         }
         
     }
@@ -251,7 +272,7 @@
                     .date p{
                         color: #000;
                         text-align: center;
-                        font-family: "Satoshi";
+                        // font-family: "Satoshi";
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 700;
@@ -286,7 +307,7 @@
                     .time p{
                         color: #000;
                         text-align: center;
-                        font-family: "Satoshi";
+                        // font-family: "Satoshi";
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 700;
@@ -321,12 +342,12 @@
             .calendar{
                 .limitedCapacityonly h1{
                     color: var(--Secondary-Black, #131313);
-    font-family: "Satoshi";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 162%;
-    text-transform: uppercase;
+                    // font-family: "Satoshi";
+                    font-size: 20px;
+                     font-style: normal;
+                      font-weight: 700;
+                    line-height: 162%;
+                    text-transform: uppercase;
                 }
             }
         }
@@ -338,26 +359,26 @@
             .calendar{
                 .limitedCapacityonly p{
                     color: #F00;
-    font-family: "Satoshi";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 162%;
+                //    font-family: "Satoshi";
+                   font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 162%;
                 }
             }
         }
     }
 }
-.solution{
-    .subSolution{
-        .timer{
-            border-radius: 0px 0px 16px 16px;
-            border-right: 1px solid #EAEAEA;
-            border-bottom: 1px solid #EAEAEA;
-            border-left: 1px solid #EAEAEA;
-        }
-    }
-}
+// .solution{
+//     .subSolution{
+//         .timer{
+//             border-radius: 0px 0px 16px 16px;
+//             border-right: 1px solid #EAEAEA;
+//             border-bottom: 1px solid #EAEAEA;
+//             border-left: 1px solid #EAEAEA;
+//         }
+//     }
+// }
 .timer{
     .calendar{
         .register{
@@ -382,7 +403,7 @@
         .register #content{
             color: #000;
             text-align: center;
-            font-family: "Satoshi Variable";
+            // font-family: "Satoshi Variable";
             font-size: 13px;
              font-style: normal;
               font-weight: 400;
@@ -402,7 +423,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            // align-items: center;
             gap: 40px;
 
         }
@@ -514,6 +535,7 @@
         .subSolution{
             .timer{
                 width: 100%;
+                
             }
         }
     }
@@ -606,6 +628,24 @@
             }
         }
     }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .register{
+                        .button{
+                            width: 100%;
+                            padding: 14px 20px;
+                             display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            gap: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
 }
 
@@ -618,7 +658,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            // align-items: center;
             gap: 60px;
 
         }
