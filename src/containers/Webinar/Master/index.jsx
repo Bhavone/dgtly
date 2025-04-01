@@ -16,9 +16,10 @@ export default function Master() {
     <div className="table">
         <h1>What Will You Master?</h1>
         <div className="elements">{data.map((ele , index)=>(
+          <div className="sub-elements">
             <div className="block" key={index}><div className="image"><img src={ele.image} alt="" /></div>
             <div className="text"><p className="p1">{ele.text}</p>
-            <p className="p2">{ele.para}</p></div></div>
+            <p className="p2">{ele.para}</p></div></div></div>
            
         ))}</div>
     </div>

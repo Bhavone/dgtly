@@ -15,7 +15,7 @@
     .table h1{
         color: var(--Secondinary-900, #232325);
         text-align: center;
-        font-family: "Satoshi";
+        // font-family: "Satoshi";
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
@@ -29,6 +29,13 @@
             flex-direction: row;
             justify-content: space-between;
             gap: 24px;
+            .sub-elements{
+                padding: 1px;
+                background: linear-gradient(194deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
+                border-radius: 12px;
+                width: 23.548387097%;
+                // overflow: hidden;
+            }
         }
     }
 }
@@ -37,13 +44,14 @@
         .elements{
             .block{
                 border-radius: 12px;
-                border: 1px solid #9BBAF8;
+                // border: 1px solid #9BBAF8;
                 padding: 24px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 28px;
-                width: 23.548387097%;
+                background-color: #F1F7FD;
+                // width: 23.548387097%;
             }
         }
     }
@@ -69,7 +77,7 @@
                 .text{
                     .p1{
                         color: var(--Secondinary-900, #232325);
-                        font-family: "Satoshi";
+                        // font-family: "Satoshi";
                         font-size: 22px;
                         font-style: normal;
                         font-weight: 700;
@@ -87,7 +95,7 @@
                 .text{
                     .p2{
                         color: var(--Secondinary-600, #474749);
-                        font-family: "Satoshi";
+                        // font-family: "Satoshi";
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 400;

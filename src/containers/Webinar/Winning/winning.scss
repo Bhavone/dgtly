@@ -256,14 +256,6 @@
     .heroSection{
         .heroContainer{
             .heroSectionImageForMobile{
-                display:block;
-            }
-        }
-
-    }
-    .heroSection{
-        .heroContainer{
-            .heroSectionImageForLaptop{
                 display:none;
             }
         }
@@ -271,8 +263,19 @@
     }
     .heroSection{
         .heroContainer{
+            .heroSectionImageForLaptop{
+                display:block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+    }
+    .heroSection{
+        .heroContainer{
             .heroSectiontext{
-                gap: 0px;                                                                                                                                                                                                                                                                                                                                                                                          
+                gap: 15px;                                                                                                                                                                                                                                                                                                                                                                                          
             }
         }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
     }
@@ -299,7 +302,7 @@
     .heroSection{
         .heroSectiontext{
             .subHeading{
-                gap: 8px;
+                gap: 24px;
             }
         }
     }
