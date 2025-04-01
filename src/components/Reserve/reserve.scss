@@ -2,65 +2,65 @@
 
 
 
-        .button{
-            border-radius: 8px;
-            background: #165EF0;
-            padding: 14px 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 12px;
-            border: none;
-            align-items: center;
-            width: 94%;
-            p{
-                color: #FFF;
-                // font-family: "Satoshi Variable";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 100%;
-                letter-spacing: -0.18px;
-            }
-        }
-    
+.button {
+    border-radius: 8px;
+    cursor: pointer;
+    background: #165EF0;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    align-items: center;
+    width: 94%;
 
-        
-    
+    .reserve {
+        color: #FFF;
+        // font-family: "Satoshi Variable";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -0.18px;
+    }
+}
+
+
 /* ------------------------------------------ MOBILE SCREEN --------------------------------------------- */
 
-@media screen and (max-width:568px){
-    
-            .button{
-                width: 97%;
-            }
-        
-    
-      
-            .button p{
-                font-size: 16px;
-                line-height: 120%;
-                letter-spacing: -0.16px;
-                text-align: left;
-                
-            }
-        
+@media screen and (max-width:568px) {
+
+    .button {
+        width: 97%;
+    }
+
+
+
+    .button .reserve {
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: -0.16px;
+        text-align: left;
+
+    }
+
 }
 
 /* ------------------  FOR TABLET SCREEN ------------------------------------------------------- */
 
-@media  screen and (min-width:768px) and (max-width:992px) {
-    .button{
+@media screen and (min-width:768px) and (max-width:992px) {
+    .button {
         justify-content: center;
     }
 
 
 
-    .button p{
+    .button .reserve {
         font-size: 16px;
         line-height: 120%;
         letter-spacing: -0.16px;
         text-align: left;
-        
+
     }
 }

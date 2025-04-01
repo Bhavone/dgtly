@@ -18,17 +18,19 @@
     // justify-content: center;
     // align-items: center;
     // position: relative;
-    
+
 }
-.heroSection{
-    .heroContainer{
-        .heroSectionImageForMobile{
-            display:none;
+
+.heroSection {
+    .heroContainer {
+        .heroSectionImageForMobile {
+            display: none;
         }
     }
 }
-.heroSection{
-    .heroContainer{
+
+.heroSection {
+    .heroContainer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,8 +39,8 @@
     }
 }
 
-.heroSection{
-    .heroContainer{
+.heroSection {
+    .heroContainer {
         .heroSectiontext {
             text-align: center;
             // margin-top: -150px;
@@ -48,13 +50,15 @@
             gap: 15px;
             align-items: center;
             position: absolute;
-            top: 14%;
-  }
+            top: 18%;
+        }
+    }
 }
-}
-.heroSection{
-    .heroSectiontext{
-        .button{
+
+.heroSection {
+    .heroSectiontext {
+        .button {
+            width: fit-content;
             border-radius: 40px;
             background: #FFBB17;
             padding: 8px 24px;
@@ -62,10 +66,11 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .button{
-            .buttonText p{ 
+
+.heroSection {
+    .heroSectiontext {
+        .button {
+            .buttonText p {
                 color: #000;
                 text-align: center;
                 font-family: "Satoshi";
@@ -78,9 +83,10 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .subHeading{
+
+.heroSection {
+    .heroSectiontext {
+        .subHeading {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -89,11 +95,12 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .subHeading{
-            .subHeading1{
-                .p1{
+
+.heroSection {
+    .heroSectiontext {
+        .subHeading {
+            .subHeading1 {
+                .p1 {
                     color: #FFF;
                     text-align: center;
                     font-family: "Satoshi";
@@ -107,10 +114,11 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .subHeading{
-            .subHeading1{
+
+.heroSection {
+    .heroSectiontext {
+        .subHeading {
+            .subHeading1 {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -120,11 +128,12 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .subHeading{
-            .subHeading1{
-                .p2{
+
+.heroSection {
+    .heroSectiontext {
+        .subHeading {
+            .subHeading1 {
+                .p2 {
                     color: #FFF;
                     text-align: center;
                     font-family: "Satoshi";
@@ -137,53 +146,57 @@
         }
     }
 }
-.heroSection{
-    .heroSectiontext{
-        .subHeading{
-            .herosecImages{
+
+.heroSection {
+    .heroSectiontext {
+        .subHeading {
+            .herosecImages {
                 border-radius: 13px;
                 background: #FFF;
                 padding: 12px 16px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                gap: 48px;
+                gap: 24px;
                 align-items: center;
             }
         }
-   
+
     }
 }
 
 /* -----------------------------FOR MOBILE SCREEN----------------------------------------------------------------- */
- 
-@media screen and (max-width:568px){
-    .heroSection{
-        .heroContainer{
-            .heroSectionImageForMobile{
-                display:block;
+
+@media screen and (max-width:568px) {
+    .heroSection {
+        .heroContainer {
+            .heroSectionImageForMobile {
+                display: block;
             }
         }
 
     }
-    .heroSection{
-        .heroContainer{
-            .heroSectionImageForLaptop{
-                display:none;
+
+    .heroSection {
+        .heroContainer {
+            .heroSectionImageForLaptop {
+                display: none;
             }
         }
 
     }
-    .heroSection{
-        .heroContainer{
-            .heroSectiontext{
-                gap: 0px;                                                                                                                                                                                                                                                                                                                                                                                          
+
+    .heroSection {
+        .heroContainer {
+            .heroSectiontext {
+                gap: 0px;
             }
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+        }
     }
-    .heroSection{
-        .heroSectiontext{
-            .button{
+
+    .heroSection {
+        .heroSectiontext {
+            .button {
                 border-radius: 10.417px;
                 background: #FFBB17;
                 padding: 4px 8px;
@@ -192,48 +205,53 @@
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .button{
-                .buttonText  p{
+
+    .heroSection {
+        .heroSectiontext {
+            .button {
+                .buttonText p {
                     font-size: 12px;
-                }                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
                 gap: 8px;
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .subHeading1{
-                    .p1{
-                        font-size:37px;
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .subHeading1 {
+                    .p1 {
+                        font-size: 37px;
                     }
                 }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .subHeading1{
-                    .p2{
-                        font-size:16px;
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .subHeading1 {
+                    .p2 {
+                        font-size: 16px;
                     }
                 }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .herosecImages{
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .herosecImages {
                     border-radius: 9.411px;
                     background: #FFF;
                     padding: 3.69px 11.58px;
@@ -244,41 +262,44 @@
                     align-items: center;
                 }
             }
-       
+
         }
     }
-   
+
 }
 
 /* --------------------------- FOR TABLET SCREEN -------------------------------------------- */
 
-@media screen and (min-width:768px) and (max-width:992px){
-    .heroSection{
-        .heroContainer{
-            .heroSectionImageForMobile{
-                display:block;
+@media screen and (min-width:768px) and (max-width:992px) {
+    .heroSection {
+        .heroContainer {
+            .heroSectionImageForMobile {
+                display: block;
             }
         }
 
     }
-    .heroSection{
-        .heroContainer{
-            .heroSectionImageForLaptop{
-                display:none;
+
+    .heroSection {
+        .heroContainer {
+            .heroSectionImageForLaptop {
+                display: none;
             }
         }
 
     }
-    .heroSection{
-        .heroContainer{
-            .heroSectiontext{
-                gap: 0px;                                                                                                                                                                                                                                                                                                                                                                                          
+
+    .heroSection {
+        .heroContainer {
+            .heroSectiontext {
+                gap: 0px;
             }
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+        }
     }
-    .heroSection{
-        .heroSectiontext{
-            .button{
+
+    .heroSection {
+        .heroSectiontext {
+            .button {
                 border-radius: 10.417px;
                 background: #FFBB17;
                 padding: 4px 8px;
@@ -287,48 +308,53 @@
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .button{
-                .buttonText  p{
+
+    .heroSection {
+        .heroSectiontext {
+            .button {
+                .buttonText p {
                     font-size: 12px;
-                }                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
                 gap: 8px;
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .subHeading1{
-                    .p1{
-                        font-size:37px;
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .subHeading1 {
+                    .p1 {
+                        font-size: 37px;
                     }
                 }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .subHeading1{
-                    .p2{
-                        font-size:16px;
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .subHeading1 {
+                    .p2 {
+                        font-size: 16px;
                     }
                 }
             }
         }
     }
-    .heroSection{
-        .heroSectiontext{
-            .subHeading{
-                .herosecImages{
+
+    .heroSection {
+        .heroSectiontext {
+            .subHeading {
+                .herosecImages {
                     border-radius: 9.411px;
                     background: #FFF;
                     padding: 3.69px 11.58px;
@@ -339,7 +365,7 @@
                     align-items: center;
                 }
             }
-       
+
         }
     }
 }

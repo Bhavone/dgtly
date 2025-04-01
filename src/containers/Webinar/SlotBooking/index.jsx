@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import "./slotbooking.scss";
 import Reserve from '../../../components/Reserve';

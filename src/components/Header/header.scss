@@ -9,12 +9,13 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1100;
+  z-index: 90;
   border-bottom: 1px solid #e0e9fe;
 
   .logoWrapper {
     width: 150px;
     height: 40px;
+
     .websiteLogo {
       width: 100%;
       height: 100%;
@@ -50,12 +51,10 @@
         border-radius: 14px;
         box-shadow: 0px 7px 71px 0px rgba(0, 0, 0, 0.12);
 
-        @include variables.d-flex(
-          $al: flex-start,
+        @include variables.d-flex($al: flex-start,
           $jc: space-between,
           $fd: column,
-          $gap: 20px
-        );
+          $gap: 20px);
         padding: 18px;
         background: #fff;
 
@@ -67,11 +66,9 @@
             width: 100%;
             padding-bottom: 20px;
             border-bottom: 1px solid #ebedf0;
-            @include variables.d-flex(
-              $al: center,
+            @include variables.d-flex($al: center,
               $jc: space-between,
-              $gap: 16px
-            );
+              $gap: 16px);
             width: 100%;
 
             .navDetailslink {
@@ -82,11 +79,9 @@
                 max-width: 40px;
               }
 
-              @include variables.d-flex(
-                $al: center,
+              @include variables.d-flex($al: center,
                 $jc: space-between,
-                $gap: 16px
-              );
+                $gap: 16px);
               white-space: nowrap;
               @include variables.font-style($fs: 14px, $fw: 500, $lh: 150%);
               color: #000;
@@ -129,6 +124,7 @@
     .logoWrapper {
       width: 115px;
       height: 30px;
+
       .websiteLogo {
         width: 100%;
         height: 100%;
@@ -177,12 +173,10 @@
   }
 
   .navContent {
-    @include variables.d-flex(
-      $al: flex-start,
+    @include variables.d-flex($al: flex-start,
       $jc: flex-start,
       $gap: 10px,
-      $fd: column
-    );
+      $fd: column);
     width: 100%;
 
     .navDetails {
@@ -228,12 +222,10 @@
     }
 
     .services {
-      @include variables.d-flex(
-        $al: center,
+      @include variables.d-flex($al: center,
         $jc: space-between,
         $gap: 4.5px,
-        $fd: column
-      );
+        $fd: column);
       width: 100%;
 
       li {
