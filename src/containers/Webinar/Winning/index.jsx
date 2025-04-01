@@ -1,5 +1,6 @@
 import HeroImageLaptop from "../../../assets/images/herosection/herosec.png";
 import HeroImageMobile from "../../../assets/images/herosection/herosecMobile.png";
+import line from "../../../assets/images/herosection/line.svg";
 import dgtly from "../../../assets/images/herosection/dgtly.svg"; // Updated path
 import googlepartner from "../../../assets/images/herosection/googlepartner.svg"; // Updated path
 import logodgtly from "../../../assets/images/herosection/LogoDGTLY.svg"; // Updated path
@@ -24,8 +25,9 @@ const Winning = () => {
               </div>
               <div className="herosecImages">
                 <img src={dgtly} alt="Dgtly" />
-
+                <img src={line} alt="" />
                 <img src={googlepartner} alt="Google Partner" />
+                <img src={line} alt="" />
                 <img src={logodgtly} alt="Logo Dgtly" />
               </div>
             </div>

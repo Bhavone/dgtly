@@ -1,17 +1,20 @@
 @use "/src/styles/variables.scss" as variables;
 
-.slotbooking{
-    position: sticky;
+.slotbooking {
+    position: fixed;
     z-index: 1000;
     bottom: 0;
     width: 42%;
+    right: 30%;
+
     border-radius: 24px 24px 0px 0px;
     border: 1px solid #E1E1E1;
     background: #FFF;
     box-shadow: 0px -4px 36px 0px rgba(0, 0, 0, 0.09);
 }
-.slotbooking{
-    .booking{
+
+.slotbooking {
+    .booking {
         padding: 20px 24px;
         display: flex;
         flex-direction: column;
@@ -21,8 +24,8 @@
     }
 }
 
-.slotbooking{
-    .booking #p1{
+.slotbooking {
+    .booking #p1 {
         color: #000;
         text-align: center;
         // font-family: "Satoshi Variable";
@@ -35,37 +38,43 @@
 }
 
 /* ----------------------------- MOBILE SCREEN ---------------------------------------------  */
-@media screen and (max-width:568px){
-    .slotbooking{
+@media screen and (max-width:568px) {
+    .slotbooking {
         width: 100%;
+        right: 0;
     }
-   .slotbooking{
-    .booking{
-        padding: 20px 18px;
+
+    .slotbooking {
+        .booking {
+            padding: 20px 18px;
+        }
     }
-   }
-   .slotbooking{
-    .booking p{
-        width: 72.3%;
+
+    .slotbooking {
+        .booking p {
+            width: 100%;
+        }
     }
-   }
 }
 
 
 /* ---------------------  FOR TABLET SCREEN ---------------------------------------------------- */
 
-@media screen and (min-width:768px) and (max-width:992px){
-    .slotbooking{
+@media screen and (min-width:768px) and (max-width:992px) {
+    .slotbooking {
         width: 60%;
+        right: 20%
     }
-   .slotbooking{
-    .booking{
-        padding: 20px 18px;
+
+    .slotbooking {
+        .booking {
+            padding: 20px 18px;
+        }
     }
-   }
-   .slotbooking{
-    .booking p{
-        width: 72.3%;
+
+    .slotbooking {
+        .booking p {
+            width: 72.3%;
+        }
     }
-   }
 }

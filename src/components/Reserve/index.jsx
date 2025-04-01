@@ -19,7 +19,7 @@ const Reserve = () => {
         onClick={() => setOpenContactForm(true)}
       >
         <img src={Calendar} alt="" />
-        <p>Reserve Your Spot & Start Converting More Users</p>
+        <p className="reserve">Reserve Your Spot & Start Converting More Users</p>
       </button>
       {openContactForm ? (
         <ContactUs1
