@@ -1,4 +1,3 @@
-import React from 'react'
 import Star from "../../../assets/images/herosection/star.svg";
 import Calandar from "../../../assets/images/herosection/Calander.svg";
 import Time from "../../../assets/images/herosection/time.svg";

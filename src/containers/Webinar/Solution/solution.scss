@@ -19,17 +19,16 @@
             .upperText {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 gap: 20px;
 
                 p {
-                    color: var(--Secondinary-900, #232325);
+                    color: var(--Secondary-900, #232325);
                     font-size: 40px;
                     font-weight: 700;
                 }
 
                 .para1 {
-                    color: var(--Secondinary-500, #4F4F52);
+                    color: var(--Secondary-500, #4F4F52);
                     font-size: 18px;
                     font-weight: 400;
                     line-height: 160%;
@@ -49,14 +48,14 @@
                 }
 
                 .block {
-                    overflow: hidden;
                     background: #fff;
                     padding: 24px;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
 
-                    .heading {
+                    .heading,
+                    .para2 {
                         color: var(--Secondary-Black, #131313);
                         font-size: 18px;
                         font-weight: 700;
@@ -70,7 +69,6 @@
                         align-items: baseline;
 
                         .para2 {
-                            color: var(--Secondary-Black, #131313);
                             font-size: 18px;
                             font-weight: 400;
                             line-height: 162%;
@@ -122,7 +120,8 @@
                     align-items: center;
                     gap: 4px;
 
-                    h1 {
+                    h1,
+                    p {
                         color: var(--Secondary-Black, #131313);
                         font-size: 20px;
                         font-weight: 700;
@@ -133,8 +132,6 @@
                     p {
                         color: #F00;
                         font-size: 18px;
-                        font-weight: 700;
-                        line-height: 162%;
                     }
                 }
 
@@ -165,23 +162,23 @@
             padding: 40px 18px;
             flex-direction: column;
             gap: 40px;
+
+            .text,
+            .timer {
+                width: 100%;
+            }
+
+            .upperText p,
+            .lowerText .block .heading,
+            .lowerText .block .para2 {
+                font-size: 16px;
+            }
+
+            .limitedCapacityonly h1,
+            .limitedCapacityonly p {
+                font-size: 14px;
+            }
         }
-    }
-
-    .text,
-    .timer {
-        width: 100%;
-    }
-
-    .upperText p,
-    .lowerText .block .heading,
-    .lowerText .block .imageAndtext .para2 {
-        font-size: 16px;
-    }
-
-    .limitedCapacityonly h1,
-    .limitedCapacityonly p {
-        font-size: 14px;
     }
 }
 
@@ -191,17 +188,17 @@
             padding: 60px 38px;
             flex-direction: column;
             gap: 60px;
+
+            .text,
+            .timer {
+                width: 100%;
+            }
+
+            .upperText p,
+            .lowerText .block .heading,
+            .lowerText .block .para2 {
+                font-size: 20px;
+            }
         }
-    }
-
-    .text,
-    .timer {
-        width: 100%;
-    }
-
-    .upperText p,
-    .lowerText .block .heading,
-    .lowerText .block .imageAndtext .para2 {
-        font-size: 20px;
     }
 }
