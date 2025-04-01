@@ -73,7 +73,7 @@
             .buttonText p {
                 color: #000;
                 text-align: center;
-                font-family: "Satoshi";
+                // font-family: "Satoshi";
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
@@ -103,7 +103,7 @@
                 .p1 {
                     color: #FFF;
                     text-align: center;
-                    font-family: "Satoshi";
+                    // font-family: "Satoshi";
                     font-size: 60px;
                     font-style: normal;
                     font-weight: 900;
@@ -164,6 +164,8 @@
 
     }
 }
+
+
 
 /* -----------------------------FOR MOBILE SCREEN----------------------------------------------------------------- */
 
@@ -229,7 +231,7 @@
             .subHeading {
                 .subHeading1 {
                     .p1 {
-                        font-size: 37px;
+                        font-size: 34px;
                     }
                 }
             }
@@ -265,6 +267,7 @@
 
         }
     }
+    
 
 }
 

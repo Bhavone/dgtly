@@ -21,6 +21,7 @@ export default function Services1() {
                 <h1>Brought To You By</h1>
                 <div className="elements">
                     {data.map((ele, index) => (
+                       <div className="outerBlock">
                         <div className="block" key={index}>
                             <div className="image">
                                 <img src={ele.image} alt="Service Image" />
@@ -29,6 +30,7 @@ export default function Services1() {
                                 <p className="p1">{ele.para}</p>
                             </div>
                         </div>
+                       </div> 
                     ))}
                 </div>
             </div>
