@@ -1,0 +1,828 @@
+@use "/src/styles/variables.scss" as variables;
+
+.solution{
+    background: #FFF;
+}
+.solution{
+    .subSolution{
+        padding: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            flex-basis: 51.09375%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 32px;
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .upperText{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .upperText p{
+                color: var(--Secondinary-900, #232325);
+                font-family: "Satoshi";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .upperText{
+                .para1{
+                    color: var(--Secondinary-500, #4F4F52);
+                    font-family: "Satoshi";
+                    font-size: 18px;
+                     font-style: normal;
+                     font-weight: 400;
+                    line-height: 160%;
+                }
+            }
+        }
+    }
+}
+#name1{
+    color: #000;
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+#digital{
+    color: var(--Brand, #165EF0);
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 6%;
+    text-underline-offset: 25%;
+    text-underline-position: from-font;
+}
+#name2{
+    color: #000;
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+#dgtly{
+    color: var(--Brand, #165EF0);
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 6%;
+    text-underline-offset: 25%;
+    text-underline-position: from-font;
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                .block{
+                    border-radius: 13px;
+                    border: 1px solid #9BBAF8;
+                    background: linear-gradient(99deg, #FBFCFE 18.61%, #FFF 68.77%);
+                     padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                .block{
+                    .heading{
+                        color: var(--Secondary-Black, #131313);
+                        font-family: "Satoshi";
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 162%;
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                .block{
+                    .imageAndtext{
+                         display: flex;
+                         flex-direction: row;
+                        justify-content: space-between;
+                         gap: 8px;
+                        align-items: baseline;
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .text{
+            .lowerText{
+                .block{
+                    .imageAndtext{
+                         .para2{
+                            color: var(--Secondary-Black, #131313);
+                            font-family: "Satoshi";
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 162%;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.solution{
+    .subSolution{
+        .timer{
+            flex-basis: 40.9375%;
+        }
+        
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                padding: 20px 22px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 25px;
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .dateAndtime{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .dateAndtime{
+                    .date{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .dateAndtime{
+                    .date p{
+                        color: #000;
+                        text-align: center;
+                        font-family: "Satoshi";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 160%; /* 32px */
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .dateAndtime{
+                    .time{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .dateAndtime{
+                    .time p{
+                        color: #000;
+                        text-align: center;
+                        font-family: "Satoshi";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 160%; /* 32px */
+                    }
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .limitedCapacityonly{
+                    border-radius: 16px;
+                    background: linear-gradient(95deg, rgba(255, 218, 129, 0.30) -10.19%, rgba(255, 187, 23, 0.30) 103.57%);
+                    padding: 18px;
+                    display: flex;
+                    flex-direction: column;
+                     justify-content: space-between;
+                     align-items: center;
+                     gap: 4px;
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .limitedCapacityonly h1{
+                    color: var(--Secondary-Black, #131313);
+    font-family: "Satoshi";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162%;
+    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            .calendar{
+                .limitedCapacityonly p{
+                    color: #F00;
+    font-family: "Satoshi";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162%;
+                }
+            }
+        }
+    }
+}
+.solution{
+    .subSolution{
+        .timer{
+            border-radius: 0px 0px 16px 16px;
+            border-right: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
+            border-left: 1px solid #EAEAEA;
+        }
+    }
+}
+.timer{
+    .calendar{
+        .register{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+}
+.timer{
+    .calendar{
+        .register{
+            .button{
+                width: 100%;
+            }
+        }
+    }
+}
+.timer{
+    .calendar{
+        .register #content{
+            color: #000;
+            text-align: center;
+            font-family: "Satoshi Variable";
+            font-size: 13px;
+             font-style: normal;
+              font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.13px;
+            width: 61%;
+        }
+    }
+}
+
+/* ----------------------  FOR MOBILE SCREEN ---------------------------------------------- */
+
+@media screen and (max-width: 568px){
+    .solution{
+        .subSolution{
+            padding: 40px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                width: 100%;
+                gap: 20px;
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText{
+                    gap: 12px;
+                }
+
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText p{
+                    font-size: 24px;
+                    margin-bottom:14px;
+                }
+
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText{
+                    .para1{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #name1{
+        font-size: 16px;
+    }
+    #name2{
+        font-size:16px;
+    }
+    #digital{
+        font-size:16px;
+    }
+    #dgtly{
+        font-size:16px;
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    gap: 16px;
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        gap: 8px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        .heading{
+                            font-size: 16px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        .imageAndtext{
+                            .para2{
+                                font-size: 16px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                width: 100%;
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+        .timer{
+            .calendar{
+                padding: 18px;
+                gap: 16px;
+            }
+        }
+    }
+}
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        gap: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        .date p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        .time p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly{
+                        border-radius: 10px;
+                        padding: 12px 14px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly h1{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .timer{
+        .calendar{
+            .register #content{
+                font-size: 12px;
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+/* ------------------- FOR TABLET SCREEN -------------------------------------------- */
+
+@media screen and (min-width:768px) and (max-width:992px){
+    .solution{
+        .subSolution{
+            padding: 60px 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                width: 100%;
+                gap: 30px;
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText{
+                    gap: 12px;
+                }
+
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText p{
+                    font-size: 26px;
+                    margin-bottom:14px;
+                }
+
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .upperText{
+                    .para1{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #name1{
+        font-size: 20px;
+    }
+    #name2{
+        font-size:20px;
+    }
+    #digital{
+        font-size:20px;
+    }
+    #dgtly{
+        font-size:20px;
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    gap: 26px;
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        gap: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        .heading{
+                            font-size: 20px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .text{
+                .lowerText{
+                    .block{
+                        .imageAndtext{
+                            .para2{
+                                font-size: 20px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                width: 100%;
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+        .timer{
+            .calendar{
+                padding: 18px;
+                gap: 16px;
+            }
+        }
+    }
+}
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        gap: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        .date p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .dateAndtime{
+                        .time p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly{
+                        border-radius: 10px;
+                        padding: 12px 14px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly h1{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .solution{
+        .subSolution{
+            .timer{
+                .calendar{
+                    .limitedCapacityonly p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .timer{
+        .calendar{
+            .register #content{
+                font-size: 12px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,345 @@
+@use "/src/styles/variables.scss" as variables;
+
+// .heroSection{
+
+//     // background:url("../../assets/images/herosection/herosec.png");
+//     background-size: 100% 100%;
+// }
+/* webinar.scss */
+.heroSection {
+    background: rgba(255, 255, 255, 0.07);
+    // background-image: url("../../../assets/images/herosection/herosec.png");
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // height: 100vh;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: relative;
+    
+}
+.heroSection{
+    .heroContainer{
+        .heroSectionImageForMobile{
+            display:none;
+        }
+    }
+}
+.heroSection{
+    .heroContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.heroSection{
+    .heroContainer{
+        .heroSectiontext {
+            text-align: center;
+            // margin-top: -150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            position: absolute;
+            top: 14%;
+  }
+}
+}
+.heroSection{
+    .heroSectiontext{
+        .button{
+            border-radius: 40px;
+            background: #FFBB17;
+            padding: 8px 24px;
+            border: none;
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .button{
+            .buttonText p{ 
+                color: #000;
+                text-align: center;
+                font-family: "Satoshi";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+            }
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .subHeading{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: center;
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .subHeading{
+            .subHeading1{
+                .p1{
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Satoshi";
+                    font-size: 60px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .subHeading{
+            .subHeading1{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0;
+            }
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .subHeading{
+            .subHeading1{
+                .p2{
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Satoshi";
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+.heroSection{
+    .heroSectiontext{
+        .subHeading{
+            .herosecImages{
+                border-radius: 13px;
+                background: #FFF;
+                padding: 12px 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 48px;
+                align-items: center;
+            }
+        }
+   
+    }
+}
+
+/* -----------------------------FOR MOBILE SCREEN----------------------------------------------------------------- */
+ 
+@media screen and (max-width:568px){
+    .heroSection{
+        .heroContainer{
+            .heroSectionImageForMobile{
+                display:block;
+            }
+        }
+
+    }
+    .heroSection{
+        .heroContainer{
+            .heroSectionImageForLaptop{
+                display:none;
+            }
+        }
+
+    }
+    .heroSection{
+        .heroContainer{
+            .heroSectiontext{
+                gap: 0px;                                                                                                                                                                                                                                                                                                                                                                                          
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    }
+    .heroSection{
+        .heroSectiontext{
+            .button{
+                border-radius: 10.417px;
+                background: #FFBB17;
+                padding: 4px 8px;
+                border: none;
+                width: 44%;
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .button{
+                .buttonText  p{
+                    font-size: 12px;
+                }                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                gap: 8px;
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .subHeading1{
+                    .p1{
+                        font-size:37px;
+                    }
+                }
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .subHeading1{
+                    .p2{
+                        font-size:16px;
+                    }
+                }
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .herosecImages{
+                    border-radius: 9.411px;
+                    background: #FFF;
+                    padding: 3.69px 11.58px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 34.76px;
+                    align-items: center;
+                }
+            }
+       
+        }
+    }
+   
+}
+
+/* --------------------------- FOR TABLET SCREEN -------------------------------------------- */
+
+@media screen and (min-width:768px) and (max-width:992px){
+    .heroSection{
+        .heroContainer{
+            .heroSectionImageForMobile{
+                display:block;
+            }
+        }
+
+    }
+    .heroSection{
+        .heroContainer{
+            .heroSectionImageForLaptop{
+                display:none;
+            }
+        }
+
+    }
+    .heroSection{
+        .heroContainer{
+            .heroSectiontext{
+                gap: 0px;                                                                                                                                                                                                                                                                                                                                                                                          
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    }
+    .heroSection{
+        .heroSectiontext{
+            .button{
+                border-radius: 10.417px;
+                background: #FFBB17;
+                padding: 4px 8px;
+                border: none;
+                width: 44%;
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .button{
+                .buttonText  p{
+                    font-size: 12px;
+                }                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                gap: 8px;
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .subHeading1{
+                    .p1{
+                        font-size:37px;
+                    }
+                }
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .subHeading1{
+                    .p2{
+                        font-size:16px;
+                    }
+                }
+            }
+        }
+    }
+    .heroSection{
+        .heroSectiontext{
+            .subHeading{
+                .herosecImages{
+                    border-radius: 9.411px;
+                    background: #FFF;
+                    padding: 3.69px 11.58px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 34.76px;
+                    align-items: center;
+                }
+            }
+       
+        }
+    }
+}

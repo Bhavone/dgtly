@@ -1,0 +1,161 @@
+@use "/src/styles/variables.scss" as variables;
+.services{
+    background: #F1F7FD;
+}
+.services{
+    .table{
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 56px;
+    }
+}
+.services {
+    .table h1{
+        color: var(--Secondinary-900, #232325);
+        text-align: center;
+        font-family: "Satoshi";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+.services{
+    .table{
+        .elements{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 32px;
+        }
+    }
+}
+.services{
+    .table{
+        .elements{
+            .block{
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+                gap: 28px;
+                border-radius: 12px;
+                border: 1px solid #9BBAF8;
+                width: 48.75%;
+            }
+        }
+    }
+}
+.services{
+    .table{
+        .elements{
+            .block{
+                .text{
+                    .p1{
+                        color: var(--Secondinary-800, #323234);
+                        font-family: Satoshi;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 160%; /* 35.2px */
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------------  MOBILE SCREEN --------------------------------------------   */
+@media screen and (max-width:568px){
+    .services{
+        .table{
+            padding: 40px 18px;
+            gap: 40px;
+        }
+    }
+    .services{
+        .table h1{
+            font-size: 24px;
+        }
+    }
+    .services{
+        .table{
+            .elements{
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+    .services{
+        .table{
+            .elements{
+                .block{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .services{
+        .table{
+            .elements{
+                .block{
+                    .text{
+                        .p1{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------------ TABLET SCREEN ------------------------------------------------ */
+
+@media screen and (min-width:768px) and (max-width:992px){
+    
+        .services{
+            .table{
+                padding: 80px;
+                gap: 28px;
+            }
+        }
+        .services{
+            .table h1{
+                font-size: 30px;
+            }
+        }
+        .services{
+            .table{
+                .elements{
+                    flex-direction: row;
+                    gap: 16px;
+                }
+            }
+        }
+        // .services{
+        //     .table{
+        //         .elements{
+        //             .block{
+        //                 width: 100%;
+        //             }
+        //         }
+        //     }
+        // }
+        .services{
+            .table{
+                .elements{
+                    .block{
+                        .text{
+                            .p1{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

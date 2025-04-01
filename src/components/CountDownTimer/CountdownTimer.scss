@@ -1,0 +1,68 @@
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px 16px 0px 0px ;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 22px;
+    
+    font-family: Arial, sans-serif;
+  
+    .time-box {
+      text-align: center;
+      padding: 0 32px;
+  
+      .number {
+        font-size: 32px;
+        font-weight: bold;
+      }
+  
+      .label {
+        font-size: 12px;
+        // text-transform: uppercase;
+        opacity: 0.9;
+      }
+    }
+  
+    .divider {
+      font-size: 24px;
+      opacity: 0.1;
+    }
+  }
+
+/* --------------------------  FOR MOBILE SCREEN --------------------------------------------- */
+@media screen and (max-width:568px){
+    .countdown-timer{
+        padding: 16px 18px;
+    }
+    .countdown-timer{
+        .time-box{
+            padding: 0 16px;
+        }
+    }
+}
+
+
+/* ---------------------------  FOR TABLET SCREEN -----------------------------------------------  */
+
+@media screen and (min-width:768px) and (max-width:992px){
+  .countdown-timer{
+    padding: 20px 22px;
+}
+.countdown-timer{
+    .time-box{
+        padding: 0 32px;
+    }
+}
+.countdown-timer{
+  .time-box{
+    .label{
+      font-size:16px;
+    }
+  }
+}
+}
+    
+  
+  
