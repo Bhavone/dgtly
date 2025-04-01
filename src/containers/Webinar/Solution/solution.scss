@@ -11,7 +11,6 @@
 
         .text {
             flex-basis: 51.1%;
-            display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 32px;
@@ -42,7 +41,7 @@
 
                 .element {
                     padding: 1px;
-                    background: linear-gradient(194deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
+                    background: linear-gradient(15deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
                     border-radius: 12px;
                     overflow: hidden;
                 }
@@ -51,6 +50,7 @@
                     background: #fff;
                     padding: 24px;
                     display: flex;
+                    border-radius: 12px;
                     flex-direction: column;
                     gap: 16px;
 
@@ -80,9 +80,11 @@
 
         .timer {
             flex-basis: 40.9%;
-            border-radius: 0 0 16px 16px;
+            border-radius: 16px;
             border: 1px solid #EAEAEA;
-            height: 50%;
+            height: 67%;
+            position: sticky;
+            top: 100px;
 
             .calendar {
                 padding: 20px 22px;
