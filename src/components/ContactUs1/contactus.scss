@@ -1,34 +1,43 @@
 @use "/src/styles/variables.scss" as variables;
 
-.contactUs{
-   
-   display: flex;
+.contactUs {
+
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(66, 66, 66, .5);
     height: 100vh;
-//    width: 608px;
-// //    height: 691px;
-   .contact{
-      border-radius: 24px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 40px;
-      align-items: center;
-      background: #fff;
-      max-width: 560px;
-      
+
+    .contact {
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        background: #fff;
+        max-width: 560px;
+
     }
-    .heading{
+
+    .heading {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background: #fff;
         display: flex;
         flex-direction: row;
+        padding-top: 32px;
+        padding-bottom: 5px;
         justify-content: space-between;
         gap: 61px;
-        align-items: baseline;
+        align-items: flex-start;
+
+        img {
+            cursor: pointer;
+        }
     }
-    p{
+
+    p {
         color: var(--Secondary-Black, #131313);
         font-family: "Satoshi";
         font-size: 22px;
@@ -38,21 +47,31 @@
         text-transform: capitalize;
     }
 }
-.contactUs{
-    .contact{
-        .contactForm{
+
+.contactUs {
+    .contact {
+        .contactForm {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 32px;
             width: 100%;
+
+            .error {
+                position: absolute;
+                bottom: -24px;
+                color: red;
+            }
         }
-        .form-group{
+
+        .form-group {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 15px;
-            .text{
+            position: relative;
+
+            .text {
                 color: #474749;
                 font-family: "Satoshi";
                 font-size: 16px;
@@ -60,7 +79,8 @@
                 font-weight: 400;
                 line-height: normal;
             }
-            .clr{
+
+            .clr {
                 color: #F00;
                 font-family: "Satoshi";
                 font-size: 16px;
@@ -71,29 +91,32 @@
         }
     }
 }
-.contactUs{
-    .contact{
-        .contactForm{
-            .form-group{
-                .inputBox{
+
+.contactUs {
+    .contact {
+        .contactForm {
+            .form-group {
+                .inputBox {
                     border-radius: 4px;
                     border: 1px solid #E6E6E6;
                     background: #FBFCFE;
                     padding-top: 16px;
                     padding-bottom: 16px;
                     padding-left: 13.41px;
-                   color: #AAA;
-                font-family: "Satoshi";
-                font-size: 14px;
-                 font-style: normal;
-                 font-weight: 400;
-                 line-height: 16px;
+                    color: #AAA;
+                    font-family: "Satoshi";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
                 }
             }
         }
     }
 }
-.textArea{
+
+.textArea {
+    resize: none;
     border-radius: 4px;
     border: 1px solid #E6E6E6;
     background: #FBFCFE;
@@ -107,15 +130,17 @@
     font-weight: 400;
     line-height: 16px;
 }
-.contactUs{
-    .contact{
-        .button{
+
+.contactUs {
+    .contact {
+        .button {
             padding: 15px 32px;
             width: 100%;
             display: flex;
             justify-content: center;
         }
-        .buttonText{
+
+        .buttonText {
             color: #FFF;
             text-align: center;
             font-family: "Satoshi";
