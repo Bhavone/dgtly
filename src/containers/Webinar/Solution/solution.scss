@@ -225,6 +225,11 @@ text-underline-position: from-font;
             .text,
             .timer {
                 width: 100%;
+                .calendar{
+                    .register #content{
+                        width: 100%;
+                    }
+                }
             }
 
             .upperText p,
