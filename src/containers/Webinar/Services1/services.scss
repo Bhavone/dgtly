@@ -15,7 +15,7 @@
     .table h1{
         color: var(--Secondinary-900, #232325);
         text-align: center;
-        font-family: "Satoshi";
+        // font-family: "Satoshi";
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
@@ -35,6 +35,23 @@
 .services{
     .table{
         .elements{
+            .block-wrapper{
+                padding: 1px;
+                background: linear-gradient(40deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
+                border-radius: 12px;
+                width:100%;
+                .block{
+                    background-color: #fff;
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: space-between;
+                    gap: 28px;
+                    border-radius: 12px;
+                    border: 1px solid #9BBAF8;
+                    height: 100%;
+                }
+            }
             .block{
                 padding: 24px;
                 display: flex;
@@ -55,7 +72,7 @@
                 .text{
                     .p1{
                         color: var(--Secondinary-800, #323234);
-                        font-family: Satoshi;
+                        // font-family: Satoshi;
                         font-size: 22px;
                         font-style: normal;
                         font-weight: 400;
@@ -131,7 +148,7 @@
         .services{
             .table{
                 .elements{
-                    flex-direction: row;
+                    flex-direction: column;
                     gap: 16px;
                 }
             }

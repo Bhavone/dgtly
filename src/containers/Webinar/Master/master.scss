@@ -1,9 +1,11 @@
 @use "/src/styles/variables.scss" as variables;
-.about{
+
+.about {
     background: #F1F7FD;
 }
-.about{
-    .table{
+
+.about {
+    .table {
         padding: 100px;
         display: flex;
         flex-direction: column;
@@ -11,8 +13,9 @@
         gap: 56px;
     }
 }
-.about{
-    .table h1{
+
+.about {
+    .table h1 {
         color: var(--Secondinary-900, #232325);
         text-align: center;
         // font-family: "Satoshi";
@@ -22,45 +25,44 @@
         line-height: normal;
     }
 }
-.about{
-    .table{
-        .elements{
+
+.about {
+    .table {
+        .elements {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 24px;
-            .sub-elements{
+
+            .sub-elements {
                 padding: 1px;
-                background: linear-gradient(194deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
+                background: linear-gradient(40deg, rgb(155, 186, 248) 0%, rgb(228, 237, 253) 50%, rgb(162, 183, 226) 100%);
                 border-radius: 12px;
                 width: 23.548387097%;
                 // overflow: hidden;
+                .block{
+                    border-radius: 12px;
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 28px;
+                    background-color: #F1F7FD;
+                    height: 100%;
+
+                }
             }
         }
     }
 }
-.about{
-    .table{
-        .elements{
-            .block{
-                border-radius: 12px;
-                // border: 1px solid #9BBAF8;
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 28px;
-                background-color: #F1F7FD;
-                // width: 23.548387097%;
-            }
-        }
-    }
-}
-.about{
-    .table{
-        .elements{
-            .block{
-                .text{
+
+
+
+.about {
+    .table {
+        .elements {
+            .block {
+                .text {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -70,12 +72,13 @@
         }
     }
 }
-.about{
-    .table{
-        .elements{
-            .block{
-                .text{
-                    .p1{
+
+.about {
+    .table {
+        .elements {
+            .block {
+                .text {
+                    .p1 {
                         color: var(--Secondinary-900, #232325);
                         // font-family: "Satoshi";
                         font-size: 22px;
@@ -88,12 +91,13 @@
         }
     }
 }
-.about{
-    .table{
-        .elements{
-            .block{
-                .text{
-                    .p2{
+
+.about {
+    .table {
+        .elements {
+            .block {
+                .text {
+                    .p2 {
                         color: var(--Secondinary-600, #474749);
                         // font-family: "Satoshi";
                         font-size: 18px;
@@ -108,22 +112,24 @@
 }
 
 /* -------------------------------- FOR MOBILE SCREEN ---------------------------------------------------- */
- 
-@media screen and (max-width:568px){
-    .about{
-        .table{
+
+@media screen and (max-width:568px) {
+    .about {
+        .table {
             padding: 40px 18px;
             gap: 40px;
         }
     }
-    .about{
-        .table h1{
+
+    .about {
+        .table h1 {
             font-size: 24px;
         }
     }
-    .about{
-        .table{
-            .elements{
+
+    .about {
+        .table {
+            .elements {
                 flex-direction: column;
                 .sub-elements{
                     width: 100%;
@@ -132,22 +138,23 @@
         }
     }
 
-    .about{
-        .table{
-            .elements{
-                .block{
+    .about {
+        .table {
+            .elements {
+                .block {
                     gap: 18px;
                     width: 100%;
                 }
             }
         }
     }
-    .about{
-        .table{
-            .elements{
-                .block{
-                    .text{
-                        .p2{
+
+    .about {
+        .table {
+            .elements {
+                .block {
+                    .text {
+                        .p2 {
                             font-size: 16px;
 
                         }
@@ -160,43 +167,39 @@
 
 /* -------------------------------- FOR TABLET SCREEN -------------------------------------------------- */
 
-@media screen and (min-width:768px)and (max-width:992px){
-    .about{
-        .table{
+@media screen and (min-width:768px)and (max-width:992px) {
+    .about {
+        .table {
             padding: 100px 60px;
-            
-        }
-    }
-    .about{
-        .table h1{
-            font-size: 40px;
-        }
-    }
-    .about{
-        .table{
-            .elements{
-                flex-direction: row;
-            }
-        }
-    }
-    .about{
-        .table{
-            .elements{
-                .block{
-                    gap: 18px;
-                    width: 100%;
-                }
-            }
-        }
-    }
-    .about{
-        .table{
-            .elements{
-                .block{
-                    .text{
-                        .p2{
-                            font-size: 16px;
 
+        }
+    }
+
+    .about {
+        .table h1 {
+            font-size: 34px;
+        }
+    }
+
+    .about {
+        .table {
+            .elements {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap:42px;
+                .sub-elements{
+                    width: 46.548387%;
+                    .block{
+                        width: 100%;
+                        .text{
+                            .p1{
+                                font-size:22px;
+                            }
+                            .p2{
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
@@ -204,3 +207,47 @@
         }
     }
 }
+
+@media screen and (min-width:569px) and (max-width:767px){
+    .about {
+        .table {
+            padding: 100px 60px;
+
+        }
+    }
+
+    .about {
+        .table h1 {
+            font-size: 34px;
+        }
+    }
+
+    .about {
+        .table {
+            .elements {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap:42px;
+                .sub-elements{
+                    width: 100%;
+                    .block{
+                        width: 100%;
+                        .text{
+                            .p1{
+                                font-size:22px;
+                            }
+                            .p2{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+
+    

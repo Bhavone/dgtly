@@ -1,18 +1,15 @@
-import HeroImageLaptop from "../../../assets/images/herosection/herosec.png";
-import HeroImageMobile from "../../../assets/images/herosection/herosecMobile.png";
+import React from 'react'
 import line from "../../../assets/images/herosection/line.svg";
 import dgtly from "../../../assets/images/herosection/dgtly.svg"; // Updated path
 import googlepartner from "../../../assets/images/herosection/googlepartner.svg"; // Updated path
 import logodgtly from "../../../assets/images/herosection/LogoDGTLY.svg"; // Updated path
-import "./winning.scss";
+import "./win.scss"
 import FadeUp from "../../../hooks/FadeUp";
-// import useScreenMobile from "../../../hooks/useScreen";
-
-const Winning = () => {
+const Win = () => {
   return (
-    <div>
+    <>
       <section className="container heroSection">
-        <div className="heroContainer">
+        
           <div className="heroSectiontext">
             <button type="button" className="button">
               <div className="buttonText">
@@ -39,16 +36,12 @@ const Winning = () => {
               </div>
             </div>
           </div>
-          <div className="heroSectionImageForLaptop">
-            <img src={HeroImageLaptop} alt="" />
-          </div>
-          <div className="heroSectionImageForMobile">
-            <img src={HeroImageMobile} alt="" />
-          </div>
-        </div>
+          
+        
       </section>
-    </div>
-  );
-};
 
-export default Winning;
+    </>
+  )
+}
+
+export default Win
