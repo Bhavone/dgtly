@@ -94,68 +94,9 @@
 /* ---------------------------------- TABLET SCREEN ------------------------------------------------- */
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .about {
-    .table {
-      .elements {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 42px;
-      }
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          border-radius: 12px;
-          border: 1px solid #9bbaf8;
-          padding: 24px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 28px;
-          width: 44.548387%;
-        }
-      }
-    }
-  }
-  .about {
-    .table h1 {
-      font-size: 36px;
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          .text {
-            .p1 {
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          .text {
-            .p2 {
-              font-size: 16px;
-            }
-          }
-        }
-      }
-    }
-  }
   .testimonials {
     .testimonials-wrapper {
       flex-direction: column;
-      gap: 24px;
     }
   }
   .testimonials {
@@ -168,64 +109,6 @@
 }
 
 @media screen and (min-width: 569px) and (max-width: 767px) {
-  .about {
-    .table {
-      .elements {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 42px;
-      }
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          border-radius: 12px;
-          border: 1px solid #9bbaf8;
-          padding: 24px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 28px;
-          width: 44.548387%;
-        }
-      }
-    }
-  }
-  .about {
-    .table h1 {
-      font-size: 36px;
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          .text {
-            .p1 {
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-  }
-  .about {
-    .table {
-      .elements {
-        .block {
-          .text {
-            .p2 {
-              font-size: 16px;
-            }
-          }
-        }
-      }
-    }
-  }
   .testimonials {
     .testimonials-wrapper {
       flex-direction: column;
