@@ -21,9 +21,9 @@ const Solution = () => {
             </FadeUp>
             <FadeUp>
               <p className="para1">
-                Join <span id="name1">Anna Potanina{" "}</span>(ex-Google UX Lead,
+                Join <span id="name1">Anna Potanina </span>(ex-Google UX Lead,
                 Founder of <span id="digital">Call to Action Digital</span>) and
-                <span id="name2">{" "}Bhavna Taneja</span>{" "}(ex-Google UX, Founder of {" "}
+                <span id="name2"> Bhavna Taneja</span> (ex-Google UX, Founder of{" "}
                 <span id="dgtly">DGTLY</span>) as they share high-impact
                 strategies used by top-performing apps and websites.
               </p>
@@ -92,7 +92,11 @@ const Solution = () => {
                   <p>25April,2025</p>
                 </div>
                 <div className="time">
-                  <img src={Time} alt="" />
+                  <div className="imageWrapper">
+                    {" "}
+                    <img src={Time} alt="" />
+                  </div>
+
                   <p>3:00PM - 4:30PM</p>
                 </div>
               </div>

@@ -5,6 +5,7 @@
     border-radius: 8px;
     border: 1.5px solid variables.$blue-color-0;
     @include variables.d-flex($al : center, $jc: center, $gap: 12px);
+    cursor: pointer;
 
     p {
         color: variables.$blue-color-0;

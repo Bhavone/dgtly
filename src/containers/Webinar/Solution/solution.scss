@@ -109,6 +109,12 @@
             display: flex;
             gap: 16px;
             align-items: center;
+            .imageWrapper{
+                overflow: hidden;
+                img{
+                    scale: 1.01;
+                };
+            }
 
             p {
               color: #000;
@@ -204,64 +210,16 @@
   text-underline-position: from-font;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 568px) {
-  .solution {
-    .subSolution {
-      padding: 40px 18px;
-      flex-direction: column;
-      gap: 40px;
-
-      .text,
-      .timer {
-        width: 100%;
-        .calendar {
-          .register #content {
-            width: 100%;
-          }
+@media screen and (max-width: 1100px){
+    .solution {
+     .subSolution {
+        flex-direction: column;
+        gap: 80px;
         }
-      }
-
-      .upperText p,
-      .lowerText .block .heading,
-      .lowerText .block .para2 {
-        font-size: 16px;
-      }
-
-      .limitedCapacityonly h1,
-      .limitedCapacityonly p {
-        font-size: 14px;
-      }
     }
-  }
-
-  .text,
-  .timer {
-    width: 100%;
-  }
-
-  .upperText p,
-  .lowerText .block .heading,
-  .lowerText .block .imageAndtext .para2 {
-    font-size: 16px;
-  }
-
-  .limitedCapacityonly h1,
-  .limitedCapacityonly p {
-    font-size: 14px;
-  }
-  .solution {
-    .subSolution {
-      .text {
-        .upperText p {
-          font-size: 24px;
-        }
-      }
-    }
-  }
+  
 }
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen  and (max-width: 992px) {
   .solution {
     .subSolution {
       padding: 60px 38px;
@@ -279,5 +237,68 @@
         font-size: 20px;
       }
     }
+  }
+}
+/* Responsive Styles */
+@media screen and (max-width: 568px) {
+  
+  .solution {
+    .subSolution {
+      padding: 40px 18px;
+      flex-direction: column;
+      gap: 40px;
+      .text {
+        .upperText {
+          gap: unset;
+          margin-bottom: 20px;
+          p {
+            font-size: 24px;
+            margin-bottom: 26px;
+          }
+          .para1 {
+            font-size: 16px;
+            margin-bottom: 12px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .lowerText {
+          .block {
+            padding: 20px;
+          }
+        }
+      }
+      .timer {
+        .calendar {
+          .register {
+            #content {
+              width: 100%;
+            }
+          }
+          .limitedCapacityonly{
+            h1{
+                font-size: 14px;
+            }
+            p{
+                font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #name1 {
+    font-size: 16px;
+  }
+  #name2 {
+    font-size: 16px;
+  }
+  #digital {
+    font-size: 16px;
+  }
+  #dgtly {
+    font-size: 16px;
   }
 }

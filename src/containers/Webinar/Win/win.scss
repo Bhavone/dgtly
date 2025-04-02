@@ -68,28 +68,25 @@
           font-weight: 500;
           line-height: normal;
         }
-        .herosecImages {
-          border-radius: 13px !important;
-          background: #fff !important;
-          padding: 12px 16px !important;
-          display: flex !important;
-          flex-direction: row !important;
-          justify-content: space-between !important;
-          gap: 48px !important;
-          align-items: center !important;
-        }
       }
-      // .herosecImages{
-      //         border-radius: 13px !important;
-      //         background: #FFF !important;
-      //         padding: 12px 16px !important;
-      //         display: flex !important;
-      //         flex-direction: row !important;
-      //         justify-content: space-between !important;
-      //         gap: 48px !important;
-      //         align-items: center !important;
-      //     }
+      .herosecImages {
+        border-radius: 13px;
+        background: #fff;
+        padding: 12px 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 48px;
+        align-items: center;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .heroSection {
+    background-size: 100% 100%;
+    object-fit: cover;
   }
 }
 
@@ -100,7 +97,6 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -152,9 +148,7 @@
       .subHeading {
         gap: 19px;
         .subHeading1 {
-          gap: 4px;
           .p1 {
-            width: 92%;
             font-size: 34px !important;
           }
           .p2 {
