@@ -203,18 +203,6 @@
   text-decoration-line: underline;
   text-underline-position: from-font;
 }
-
-@media screen and (max-width: 1412px) {
-  .about {
-    .table {
-      .elements {
-        .block {
-          min-height: 277px;
-        }
-      }
-    }
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .solution {
     .subSolution {
