@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 export default defineConfig({
-  base: '/', // Change this to your desired base path
+  base: '/', 
   plugins: [react()],
   css: {
-    devSourcemap: true, // Enable CSS source maps
+    devSourcemap: true, 
   },
 });
