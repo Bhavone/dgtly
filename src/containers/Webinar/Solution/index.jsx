@@ -21,9 +21,9 @@ const Solution = () => {
             </FadeUp>
             <FadeUp>
               <p className="para1">
-                Join <span id="name1">Anna Potanina</span>(ex-Google UX Lead,
+                Join <span id="name1">Anna Potanina{" "}</span>(ex-Google UX Lead,
                 Founder of <span id="digital">Call to Action Digital</span>) and
-                <span id="name2">Bhavna Taneja</span>(ex-Google UX, Founder of
+                <span id="name2">{" "}Bhavna Taneja</span>{" "}(ex-Google UX, Founder of {" "}
                 <span id="dgtly">DGTLY</span>) as they share high-impact
                 strategies used by top-performing apps and websites.
               </p>

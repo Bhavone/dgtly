@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/webinar" element={<Webinar />} />
       </Routes>
-      {location.pathname === "/webinar" && <SlotBooking />}
+      {location.pathname === "/webinar" && <SlotBooking modClass={"stickeySlotBooking"}/>}
 
       <Footer />
     </>

@@ -42,7 +42,7 @@ const navBar = [
 ];
 
 const Header = () => {
-  const isMobile = useScreenMobile({ size: 768 });
+  const isMobile = useScreenMobile({ size: 992 });
   const [menuOpen, setMenuOpen] = useState(false);
   const [onHover, setOnHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
