@@ -109,6 +109,12 @@
             display: flex;
             gap: 16px;
             align-items: center;
+            .imageWrapper{
+                overflow: hidden;
+                img{
+                    scale: 1.01;
+                };
+            }
 
             p {
               color: #000;
@@ -203,7 +209,17 @@
   text-decoration-line: underline;
   text-underline-position: from-font;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+
+@media screen and (max-width: 1100px){
+    .solution {
+     .subSolution {
+        flex-direction: column;
+        gap: 80px;
+        }
+    }
+  
+}
+@media screen  and (max-width: 992px) {
   .solution {
     .subSolution {
       padding: 60px 38px;
@@ -225,65 +241,7 @@
 }
 /* Responsive Styles */
 @media screen and (max-width: 568px) {
-  // .solution {
-  //     .subSolution {
-  //         padding: 40px 18px;
-  //         flex-direction: column;
-  //         gap: 40px;
-
-  //         .text,
-  //         .timer {
-  //             width: 100%;
-  //             .calendar{
-  //                 .register #content{
-  //                     width: 100%;
-  //                 }
-  //             }
-  //         }
-
-  //         .upperText p,
-  //         .lowerText .block .heading,
-  //         .lowerText .block .para2 {
-  //             font-size: 16px;
-  //         }
-
-  //         .limitedCapacityonly h1,
-  //         .limitedCapacityonly p {
-  //             font-size: 14px;
-  //         }
-  //     }
-  // }
-
-  // .text,
-  // .timer {
-  //     width: 100%;
-  // }
-
-  // .upperText p,
-  // .lowerText .block .heading,
-  // .lowerText .block .imageAndtext .para2 {
-  //     font-size: 16px;
-  // }
-  // .upperText p,
-  // .lowerText .block .heading,
-  // .lowerText .block .imageAndtext .para1 {
-  //     font-size: 16px;
-  // }
-
-  // .limitedCapacityonly h1,
-  // .limitedCapacityonly p {
-  //     font-size: 14px;
-  // }
-  // .solution{
-  //     .subSolution{
-  //         .text{
-  //             .upperText p{
-  //                 font-size: 24px;
-  //             }
-  //         }
-  //     }
-  // }
-
+  
   .solution {
     .subSolution {
       padding: 40px 18px;
