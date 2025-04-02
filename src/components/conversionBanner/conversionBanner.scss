@@ -51,8 +51,6 @@
         max-width: 82%;
       }
     }
-
-  
   }
 
   .bannerImageContainer {
@@ -104,8 +102,6 @@
           text-align: center;
         }
       }
-
-     
     }
 
     .bannerImageContainer {
@@ -128,12 +124,7 @@
     );
 
     .bannerContent {
-      @include variables.d-flex(
-        $al: center,
-        $jc: center,
-        $fd: column,
-        $gap: 0
-      );
+      @include variables.d-flex($al: center, $jc: center, $fd: column, $gap: 0);
 
       .bannerCip {
         margin-bottom: 12px;
@@ -153,7 +144,7 @@
       .bannerData {
         .bannerSubHeading {
           @include variables.font-style($fs: 18px, $fw: 700, $lh: 28.2px);
-          max-width: 88%;
+          max-width: 100%;
           text-align: center;
           margin-bottom: 16px;
         }
@@ -163,7 +154,6 @@
           max-width: 100%;
         }
       }
-
     }
 
     .bannerImageContainer {
@@ -174,12 +164,12 @@
   }
 
   // digital page editions
-  .digitalBanner{
-    .bannerContent{
+  .digitalBanner {
+    .bannerContent {
       padding-bottom: 0;
       gap: unset;
 
-      .bannerHeading{
+      .bannerHeading {
         margin-bottom: unset;
       }
     }

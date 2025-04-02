@@ -104,22 +104,32 @@
           flex-direction: column;
           gap: 50px;
 
+          .date {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
           .date,
           .time {
             display: flex;
             gap: 16px;
             align-items: center;
-            .imageWrapper{
-                overflow: hidden;
-                img{
-                    scale: 1.01;
-                };
+            .imageWrapper {
+              overflow: hidden;
+
+              img {
+                scale: 1.01;
+                width: 24px;
+                height: 24px;
+              }
             }
 
             p {
               color: #000;
               text-align: center;
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 700;
               line-height: 160%;
             }
@@ -145,7 +155,7 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 162%;
-            text-transform: uppercase;
+            // text-transform: uppercase;
           }
 
           p {
@@ -210,16 +220,15 @@
   text-underline-position: from-font;
 }
 
-@media screen and (max-width: 1100px){
-    .solution {
-     .subSolution {
-        flex-direction: column;
-        gap: 80px;
-        }
+@media screen and (max-width: 1100px) {
+  .solution {
+    .subSolution {
+      flex-direction: column;
+      gap: 80px;
     }
-  
+  }
 }
-@media screen  and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .solution {
     .subSolution {
       padding: 60px 38px;
@@ -241,7 +250,6 @@
 }
 /* Responsive Styles */
 @media screen and (max-width: 568px) {
-  
   .solution {
     .subSolution {
       padding: 40px 18px;
@@ -257,32 +265,49 @@
           }
           .para1 {
             font-size: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 0px;
 
-            &:last-child {
-              margin-bottom: 0;
+            &:first-child {
+              margin-bottom: 12px;
             }
           }
         }
         .lowerText {
           .block {
             padding: 20px;
+            .imageAndtext {
+              .para2 {
+                font-size: 16px;
+                width: 101%;
+              }
+            }
           }
         }
       }
       .timer {
         .calendar {
+          .dateAndtime {
+            gap: 0;
+
+            .date {
+              padding-bottom: 16px;
+              border-bottom: 1px solid #eaeaea;
+              margin-bottom: 16px;
+            }
+          }
+
           .register {
             #content {
               width: 100%;
             }
           }
-          .limitedCapacityonly{
-            h1{
-                font-size: 14px;
+          .limitedCapacityonly {
+            h1 {
+              font-size: 14px;
+              text-transform: uppercase;
             }
-            p{
-                font-size: 14px;
+            p {
+              font-size: 14px;
             }
           }
         }
