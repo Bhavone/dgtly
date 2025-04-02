@@ -8,6 +8,7 @@ import homeBanner from "../../assets/images/banner/homeBanner.png";
 import homeBannerMobile from "../../assets/images/banner/homeBannerMobile.png";
 
 import "./homeBanner.scss";
+import JoinWebinar from "../JoinWebinar";
 
 const HomeBanner = () => {
   const isMobile = useScreenMobile({ size: 992 });
@@ -34,6 +35,8 @@ const HomeBanner = () => {
             text="Click here to schedule!"
             className="child"
           />
+
+          <JoinWebinar />
         </div>
       </div>
       <div className="bannerImageContainer">
