@@ -137,14 +137,15 @@
     .heroSection{
         background-image: url(../../../assets/images/herosection/heromobileimage.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        // background-size: cover;
+            background-size: 100% 100%;
         background-position: center;
-        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
+            min-height: 600px;
 
         .heroSectiontext{
             gap: 6px !important;
