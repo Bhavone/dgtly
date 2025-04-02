@@ -1,4 +1,3 @@
-import React from 'react'
 import line from "../../../assets/images/herosection/line.svg";
 import dgtly from "../../../assets/images/herosection/dgtly.svg"; // Updated path
 import googlepartner from "../../../assets/images/herosection/googlepartner.svg"; // Updated path
