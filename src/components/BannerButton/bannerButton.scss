@@ -17,6 +17,9 @@
 @media screen and (max-width: 568px) {
   .bannerButtonContainer {
     padding: 14px 22px;
+    position: relative;
+    width: 100%;
+    justify-content: center;
 
     .scheduleCallButton {
       @include variables.font-style($fs: 16px, $fw: 500, $lh: 150%);

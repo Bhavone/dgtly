@@ -1,0 +1,193 @@
+@use "/src/styles/variables.scss" as variables;
+.services {
+  background: #f1f7fd;
+}
+.services {
+  .table {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 56px;
+  }
+}
+.services {
+  .table h1 {
+    color: var(--Secondinary-900, #232325);
+    text-align: center;
+    // font-family: "Satoshi";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.services {
+  .table {
+    .elements {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 32px;
+    }
+  }
+}
+.services {
+  .table {
+    .elements {
+      .block-wrapper {
+        padding: 1px;
+        background: linear-gradient(
+          40deg,
+          rgb(155, 186, 248) 0%,
+          rgb(228, 237, 253) 50%,
+          rgb(162, 183, 226) 100%
+        );
+        border-radius: 12px;
+        width: 100%;
+        .block {
+          background-color: #f1f7fd;
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          // justify-content: space-between;
+          gap: 28px;
+          border-radius: 12px;
+          border: 1px solid #9bbaf8;
+          height: 100%;
+        }
+      }
+      .block {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        gap: 28px;
+        border-radius: 12px;
+        border: 1px solid #9bbaf8;
+        width: 100%;
+      }
+    }
+  }
+}
+.services {
+  .table {
+    .elements {
+      .block {
+        .text {
+          .p1 {
+            color: var(--Secondinary-800, #323234);
+            // font-family: Satoshi;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 35.2px */
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------  MOBILE SCREEN --------------------------------------------   */
+@media screen and (max-width: 568px) {
+  .services {
+    .table {
+      padding: 40px 18px;
+      gap: 40px;
+    }
+  }
+  .services {
+    .table h1 {
+      font-size: 24px;
+    }
+  }
+  .services {
+    .table {
+      .elements {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+  .services {
+    .table {
+      .elements {
+        .block {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .services {
+    .table {
+      .elements {
+        .block {
+          .text {
+            .p1 {
+              font-size: 16px;
+              width: 101%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------ TABLET SCREEN ------------------------------------------------ */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .services {
+    .table {
+      padding: 80px;
+      gap: 28px;
+    }
+  }
+  .services {
+    .table h1 {
+      font-size: 30px;
+    }
+  }
+  .services {
+    .table {
+      .elements {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+  // .services{
+  //     .table{
+  //         .elements{
+  //             .block{
+  //                 width: 100%;
+  //             }
+  //         }
+  //     }
+  // }
+  .services {
+    .table {
+      .elements {
+        .block {
+          .text {
+            .p1 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 569px) and (max-width: 767px) {
+    .services {
+      .table {
+        .elements {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

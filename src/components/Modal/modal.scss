@@ -1,0 +1,89 @@
+@use "/src/styles/variables.scss" as variables;
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 110;
+
+  &Container {
+    padding: 32px;
+    padding-top: 0px;
+    max-height: 800px;
+    border-radius: 16px;
+    background: #fff;
+    overflow: auto;
+    @include variables.d-flex($fd: column);
+    gap: 28px;
+    max-width: 560px;
+
+    @media screen and (max-height: 800px) {
+      max-height: 600px;
+    }
+
+    .customModalHeader {
+      position: relative;
+
+      .headerTitle {
+        color: var(--text-grey-strong, #211d25);
+        text-align: center;
+        font-family: "Chillax";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 34px;
+      }
+
+      .cross {
+        cursor: pointer;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    .modalFooterContainer {
+      // background-color: var(--background-bg-normal);
+      width: 100%;
+      @include variables.d-flex($al: center, $jc: flex-end);
+      gap: 16px;
+    }
+  }
+
+  &Header {
+    @include variables.d-flex($al: center, $jc: space-between);
+
+    .cross {
+      svg {
+        height: 22px;
+        width: 22px;
+      }
+
+      cursor: pointer;
+    }
+
+    p {
+      overflow: hidden;
+      @include variables.font-style($fs: 24px, $fw: 600, $lh: 34px);
+      color: var(--text-grey-strong);
+    }
+  }
+
+  &Content {
+    @include variables.d-flex($fd: column, $al: center);
+    gap: 28px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
