@@ -7,7 +7,7 @@ const SlotBooking= () => {
     <section className="container slotbooking">
         <div className="booking">
            <Reserve/>
-           <p id="p1">Can't attend? Register to get the recording. Let's improve your apps and websites for users!</p>
+           <p id="p1">Can&apos;t attend? Register to get the recording. Let&apos;s improve your apps and websites for users!</p>
         </div>
     </section>
   )

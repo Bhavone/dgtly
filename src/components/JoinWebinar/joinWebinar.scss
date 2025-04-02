@@ -1,0 +1,30 @@
+@use "/src/styles/variables.scss" as variables;
+
+.webinarContainer {
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: 1.5px solid variables.$blue-color-0;
+    @include variables.d-flex($al : center, $jc: center, $gap: 12px);
+
+    p {
+        color: variables.$blue-color-0;
+        @include variables.font-style($fs: 18px, $fw: 500, $lh: 150%);
+
+    }
+}
+
+
+@media (max-width: 568px) {
+    .webinarContainer {
+        padding: 14px 22px;
+        @include variables.d-flex($al: center, $jc: center, $gap: 8px);
+
+
+        p {
+            color: variables.$blue-color-0;
+            @include variables.font-style($fs: 16px, $fw: 500, $lh: 150%);
+
+        }
+    }
+
+}
