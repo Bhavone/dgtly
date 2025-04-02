@@ -69,27 +69,18 @@
                     line-height: normal;
 
                 }
-                .herosecImages{
-                    border-radius: 13px !important;
-                    background: #FFF !important;
-                    padding: 12px 16px !important;
-                    display: flex !important;
-                    flex-direction: row !important;
-                    justify-content: space-between !important;
-                    gap: 48px !important;
-                    align-items: center !important;
-                }
+               
             }
-            // .herosecImages{
-            //         border-radius: 13px !important;
-            //         background: #FFF !important;
-            //         padding: 12px 16px !important;
-            //         display: flex !important;
-            //         flex-direction: row !important;
-            //         justify-content: space-between !important;
-            //         gap: 48px !important;
-            //         align-items: center !important;
-            //     }
+            .herosecImages{
+                    border-radius: 13px;
+                    background: #FFF ;
+                    padding: 12px 16px;
+                    display: flex ;
+                    flex-direction: row ;
+                    justify-content: space-between;
+                    gap: 48px ;
+                    align-items: center;
+                }
         }
     }
     
@@ -168,7 +159,7 @@
                     }
                 }
                 .herosecImages{
-                    border-radius: 9.411px;
+                    border-radius: 9.411px ;
                     background: #FFF;
                     padding: 8.69px 11.58px;
                     display: flex;
