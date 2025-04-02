@@ -136,13 +136,13 @@
 
       .bannerHeading {
         @include variables.font-style($fs: 34px, $fw: 700, $lh: 44px);
-        max-width: 70%;
+        max-width: 100%;
         text-align: center;
       }
 
       .bannerDetail {
         @include variables.font-style($fs: 16px, $fw: 400, $lh: 160%);
-        max-width: 84%;
+        max-width: 100%;
       }
     }
 

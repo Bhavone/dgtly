@@ -97,12 +97,13 @@
   .testimonials {
     .testimonials-wrapper {
       flex-direction: column;
+      gap: 25px;
     }
   }
   .testimonials {
     .testimonials-wrapper {
       .block {
-        width: 89.4375%;
+        width: 100%;
       }
     }
   }

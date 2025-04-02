@@ -172,7 +172,11 @@
           );
 
           .cardHeading {
-            @include variables.font-style($fs: 20px, $fw: 700, $lh: 150%);
+            @include variables.font-style(
+              $fs: 20px !important,
+              $fw: 700,
+              $lh: 150%
+            );
           }
 
           .cardDetail {
