@@ -4,11 +4,9 @@
   position: fixed;
   z-index: 10;
   bottom: 0;
-  width: 42%;
-  left: 50%;
-  transform: translateX(-50%);
-
-
+  // width: 42%;
+  max-width: 600px;
+  right: 30%;
   border-radius: 24px 24px 0px 0px;
   border: 1px solid #e1e1e1;
   background: #fff;
@@ -43,12 +41,10 @@
 @media screen and (max-width: 1370px) {
   .stickeySlotBooking {
     width: 44%;
-   
 
     .booking {
       .button {
         width: 100%;
-      
       }
     }
   }
@@ -56,11 +52,10 @@
 @media screen and (max-width: 1100px) {
   .stickeySlotBooking {
     width: 60%;
-   
+
     .booking {
       .button {
         width: 100%;
-      
       }
     }
   }
@@ -70,33 +65,30 @@
     width: 100%;
     left: unset;
     transform: unset;
-   
+
     .booking {
       .button {
         width: 100%;
         justify-content: center;
 
-        .reserve{
-            width: unset;
+        .reserve {
+          width: unset;
         }
-      
       }
     }
   }
 }
 @media screen and (max-width: 568px) {
   .stickeySlotBooking {
-   
     .booking {
       .button {
         justify-content: unset;
 
-        .reserve{
-            width: 75%;
+        .reserve {
+          width: 75%;
         }
-      
       }
-      #p1{
+      #p1 {
         width: 85%;
       }
     }
@@ -105,26 +97,32 @@
 
 /* ---------------------  FOR TABLET SCREEN ---------------------------------------------------- */
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    // .slotbooking {
-    //   width: 64%;
-    //   right: 20%;
-    // }
-  
-    .slotbooking {
-      .booking {
-        padding: 20px 18px;
-      }
-    }
-  
-    .slotbooking {
-      .booking p {
-        width: 87%;
-        white-space: normal;
-      }
+@media screen and (max-width: 1100px) {
+  .slotbooking {
+    right: 20%;
+  }
+}
+@media screen and (max-width: 992px) {
+  // .slotbooking {
+  //   width: 64%;
+  //   right: 20%;
+  // }
+
+  .slotbooking {
+    right: unset;
+    max-width: 100%;
+    .booking {
+      padding: 20px 18px;
     }
   }
-  
+
+  .slotbooking {
+    .booking p {
+      width: 87%;
+      white-space: normal;
+    }
+  }
+}
 
 /* ----------------------------- MOBILE SCREEN ---------------------------------------------  */
 @media screen and (max-width: 568px) {
@@ -146,4 +144,3 @@
     }
   }
 }
-
