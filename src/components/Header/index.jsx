@@ -41,7 +41,7 @@ const navBar = [
   },
 ];
 
-const Header = () => {
+const Header = ({zIndexSetUp,setZIndexSetUp}) => {
   const isMobile = useScreenMobile({ size: 992 });
   const [menuOpen, setMenuOpen] = useState(false);
   const [onHover, setOnHover] = useState(false);
@@ -113,7 +113,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="container headerContainer">
+      <div className="container headerContainer" style={{zIndex: zIndexSetUp ? "3": ""}}>
         <div className="logoWrapper">
           <Link
             to="/"

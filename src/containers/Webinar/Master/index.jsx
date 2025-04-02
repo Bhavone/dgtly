@@ -33,9 +33,9 @@ export default function Master() {
     <>
       <section className=" container about">
         <div className="table">
-          <FadeUp>
+         {/* <FadeUp>  */}
             <h1>What Will You Master?</h1>
-          </FadeUp>
+          {/* </FadeUp> */}
           <div className="elements">
             {data.map((ele, index) => (
               <div key={index} className="sub-elements">

@@ -7,7 +7,7 @@ import Reserve from "../../../components/Reserve";
 import CountDownTimer from "../../../components/CountDownTimer";
 import FadeUp from "../../../hooks/FadeUp";
 
-const Solution = () => {
+const Solution = ({ zIndexSetUp, setZIndexSetUp }) => {
   return (
     <section className="container solution">
       <div className="subSolution">
@@ -82,7 +82,12 @@ const Solution = () => {
           </div>
         </div>
         {/* Make the timer sticky */}
-        <StickyBox offsetTop={100} offsetBottom={10}>
+        <StickyBox
+          offsetTop={100}
+          offsetBottom={10}
+          className="stickyBox"
+          style={{ zIndex: zIndexSetUp ? "15" : "" }}
+        >
           <div className="timer">
             <CountDownTimer />
             <div className="calendar">
@@ -105,7 +110,7 @@ const Solution = () => {
                 <p>Only 50 of 200 slots left</p>
               </div>
               <div className="register">
-                <Reserve />
+                <Reserve zIndexSetUp={zIndexSetUp} setZIndexSetUp={setZIndexSetUp}/>
                 <p id="content">
                   Can&apos;t attend? Register to get the recording. Let&apos;s
                   improve your apps and websites for users!

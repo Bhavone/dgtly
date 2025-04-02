@@ -4,12 +4,12 @@ import Testimonials from "./Testimonials";
 import Services1 from "./Services1";
 import Solution from "./Solution";
 
-export default function Webinar() {
+export default function Webinar({zIndexSetUp, setZIndexSetUp}) {
   // const x = 10;
   return (
     <>
       <Win/>
-      <Solution />
+      <Solution zIndexSetUp={zIndexSetUp} setZIndexSetUp={setZIndexSetUp}/>
       <Master/>
       <Testimonials />
       <Services1 />
