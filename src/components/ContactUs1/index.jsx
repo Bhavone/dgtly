@@ -42,15 +42,14 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
       isValid = false;
     }
     
-    if (!formData.company) {
-      formErrors.company = "Website or App Link is required.";
+    if (!formData.email) {
+      formErrors.email = "Email is required.";
       isValid = false;
-    } 
-    // Optional: Additional validation for the message field (can be empty)
-    if (formData.message && formData.message.length < 10) {
-      formErrors.message = "Message should be at least 10 characters long.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      formErrors.email = "Please enter a valid email address.";
       isValid = false;
     }
+
 
     setErrors(formErrors);
     return isValid;
@@ -90,7 +89,7 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
   return (
     <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
       <section className="container contactUs">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="contact">
             <div className="heading">
               <p>
