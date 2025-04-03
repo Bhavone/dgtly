@@ -17,7 +17,7 @@ export default function Testimonials() {
       image: Vivian,
       para1: "Vivian Koh",
       para2:
-        "VK Transformation Owner, Singapore Management University Educator",
+        "VK Transformation Owner",
     },
   ];
   return (

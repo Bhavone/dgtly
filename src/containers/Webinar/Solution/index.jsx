@@ -94,7 +94,7 @@ const Solution = ({ zIndexSetUp, setZIndexSetUp }) => {
               <div className="dateAndtime">
                 <div className="date">
                   <img src={Calandar} alt="" />
-                  <p>25April,2025</p>
+                  <p>25 April, 2025</p>
                 </div>
                 <div className="time">
                   <div className="imageWrapper">
