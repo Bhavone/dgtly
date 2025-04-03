@@ -11,7 +11,7 @@ const JoinWebinar = () => {
   return (
     <div className="container webinarContainer" onClick={handleRedirect}>
       <img src={calenderImage} alt="" />
-      <p>Join our free CRO webinar</p>
+      <p>Join our free webinar on Apr 25</p>
     </div>
   );
 };

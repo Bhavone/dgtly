@@ -43,7 +43,7 @@
 
       .webinarContainer {
         p {
-          text-wrap: nowrap;
+          // text-wrap: nowrap;
         }
       }
 
@@ -75,7 +75,19 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1370px){
+  .homeBannerContainer{
+
+    .bannerImageContainer{
+
+      .bannerImage{
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .homeBannerContainer {
     padding: 60px 80px;
     padding-top: 139px;
@@ -110,6 +122,20 @@
     .bannerImageContainer {
       .bannerImage {
         max-width: 651px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .homeBannerContainer {
+    .bannerContent {
+      .ButtonContainer {
+        flex-direction: column;
+        .child {
+          height: 45%;
+          width: 100%;
+        }
       }
     }
   }

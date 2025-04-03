@@ -10,7 +10,7 @@
     p {
         color: variables.$blue-color-0;
         @include variables.font-style($fs: 18px, $fw: 500, $lh: 150%);
-
+        white-space: nowrap;
     }
 }
 
