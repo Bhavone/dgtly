@@ -4,7 +4,7 @@ import FadeUp from "../../hooks/FadeUp";
 
 // import websiteLogo from "../../assets/images/header/websiteLogo.svg";
 import websiteLogo from "../../assets/images/header/LogoDGTLY.png";
-import linkedInFooter from "../../assets/images/aboutUs/linkedInFooter.svg";
+// import linkedInFooter from "../../assets/images/aboutUs/linkedInFooter.svg";
 
 import "./footer.scss";
 import useScreenMobile from "../../hooks/useScreen";
