@@ -6,18 +6,21 @@ import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
+    email: "",
+
     company: "",
-    websiteorappLink: "",
     message: "",
   });
 
   const [errors, setErrors] = useState({
-    fullName: "",
+    name: "",
+    email: "",
     company: "",
-    websiteorappLink: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   // Handle form data changes
   const handleChange = (e) => {
@@ -34,23 +37,15 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
     let isValid = true;
 
     // Check for required fields
-    if (!formData.fullName) {
-      formErrors.fullName = "Full Name is required.";
+    if (!formData.name) {
+      formErrors.name = "Full Name is required.";
       isValid = false;
     }
+    
     if (!formData.company) {
-      formErrors.company = "Company Name is required.";
+      formErrors.company = "Website or App Link is required.";
       isValid = false;
-    }
-    if (!formData.websiteorappLink) {
-      formErrors.websiteorappLink = "Website or App Link is required.";
-      isValid = false;
-    } else if (
-      !/^(ftp|http|https):\/\/[^ "]+$/.test(formData.websiteorappLink)
-    ) {
-      formErrors.websiteorappLink = "Please enter a valid URL.";
-      isValid = false;
-    }
+    } 
     // Optional: Additional validation for the message field (can be empty)
     if (formData.message && formData.message.length < 10) {
       formErrors.message = "Message should be at least 10 characters long.";
@@ -62,14 +57,36 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
   };
 
   // Handle form submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form data submitted:", formData);
-      handleCloseModal();
+      setLoading(true);
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzfbknOUj6qwoPUS_hQl0xZxlHOErXiuWP3RqKtjlRssQtng8j67Zq9R3ZkG-znLJI/exec";
+
+      const formBody = new URLSearchParams(formData).toString();
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formBody,
+        });
+
+        if (response.ok) {
+          alert("Data stored successfully!");
+          setFormData({ name: "", email: "", company: "",message: "" }); 
+        } else {
+          alert("Error storing data.");
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error("Error:", error);
+
+        console.log("Form data submitted:", formData);
+        handleCloseModal();
+      }
     }
   };
-
   return (
     <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
       <section className="container contactUs">
@@ -84,51 +101,49 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
             </div>
             <div className="contactForm">
               <div className="form-group">
-                <label htmlFor="fullName" className="text">
+                <label htmlFor="name" className="text">
                   Full Name<span className="clr">*</span>
                 </label>
                 <input
                   type="text"
-                  name="fullName"
+                  name="name"
                   className="inputBox"
                   placeholder="Enter Your Full Name"
-                  value={formData.fullName}
+                  value={formData.name}
                   onChange={handleChange}
                 />
-                {errors.fullName && (
-                  <span className="error">{errors.fullName}</span>
+                {errors.name && <span className="error">{errors.name}</span>}
+              </div>
+              <div className="form-group">
+                <label htmlFor="email" className="text">
+                  Email<span className="clr">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  className="inputBox"
+                  placeholder="Enter Your Company Name"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <span className="error">{errors.email}</span>
                 )}
               </div>
               <div className="form-group">
                 <label htmlFor="company" className="text">
-                  Company<span className="clr">*</span>
+                  Company
                 </label>
                 <input
                   type="text"
                   name="company"
                   className="inputBox"
-                  placeholder="Enter Your Company Name"
+                  placeholder="Enter your web or app URL or link"
                   value={formData.company}
                   onChange={handleChange}
                 />
                 {errors.company && (
                   <span className="error">{errors.company}</span>
-                )}
-              </div>
-              <div className="form-group">
-                <label htmlFor="websiteorappLink" className="text">
-                  Website or App Link<span className="clr">*</span>
-                </label>
-                <input
-                  type="url"
-                  name="websiteorappLink"
-                  className="inputBox"
-                  placeholder="Enter your web or app URL or link"
-                  value={formData.websiteorappLink}
-                  onChange={handleChange}
-                />
-                {errors.websiteorappLink && (
-                  <span className="error">{errors.websiteorappLink}</span>
                 )}
               </div>
               <div className="form-group">
@@ -148,7 +163,7 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
               </div>
             </div>
             <button type="submit" className="button">
-              <div className="buttonText">Submit</div>
+              <div className="buttonText">{loading ? "Loading...":"Submit"}</div>
             </button>
           </div>
         </form>
@@ -156,5 +171,4 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
     </Modal>
   );
 };
-
 export default ContactUs1;

@@ -7,7 +7,7 @@ export default function Services1() {
   const data = [
     {
       image: ETND,
-      para: "CTA Digital is a UX consulting agency founded by the ex-Google offering the all-time-popular UX workshop formats, refined over years of testing with the Google UX team, including Mobile UX audits, Mobile Labs, and Google Design Sprints.",
+      para: "CTA Digital is a UX consulting agency founded by the Ex-Google offering the all-time-popular UX workshop formats, refined over years of testing with the Google UX team, including mobile UX audits, Mobile Labs, and Google Design Sprints.",
     },
     {
       image: DGTLY,
@@ -22,27 +22,20 @@ export default function Services1() {
           <h1>Brought To You By</h1>
         </FadeUp>
         <div className="elements">
-         
-
-
           {data.map((ele, index) => (
-           <div className="block-wrapper">
-
-
-            <div className="block" key={index}>
-              <div className="image">
-                <img src={ele.image} alt="Service Image" />
-              </div>
-              <div className="text">
-                <FadeUp>
-                  <p className="p1">{ele.para}</p>
-                </FadeUp>
+            <div className="block-wrapper" key={index}>
+              <div className="block">
+                <div className="image">
+                  <img src={ele.image} alt="Service Image" />
+                </div>
+                <div className="text">
+                  <FadeUp>
+                    <p className="p1">{ele.para}</p>
+                  </FadeUp>
+                </div>
               </div>
             </div>
-           </div> 
-            
           ))}
-          
         </div>
       </div>
     </section>
