@@ -2,6 +2,8 @@ import Modal from "../Modal/Modal";
 import Cross from "../../assets/images/herosection/cross.svg";
 import "./contactus.scss";
 import { useState } from "react";
+import ScheduleCallButton from "../ScheduleCallButton";
+import successIcon from "../../assets/images/contactUs/successIcon.svg";
 
 // eslint-disable-next-line react/prop-types
 const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
@@ -21,6 +23,14 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
   });
 
   const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line 
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  // Go back
+
+  const handleGoBack = () => {
+    setIsSubmit(false)
+  }
 
   // Handle form data changes
   const handleChange = (e) => {
@@ -72,12 +82,13 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
         });
 
         if (response.ok) {
-          alert("Data stored successfully!");
+          setIsSubmit(true);
           setFormData({ name: "", email: "", company: "",message: "" }); 
         } else {
           alert("Error storing data.");
         }
         setLoading(false);
+    
       } catch (error) {
         console.error("Error:", error);
 
@@ -89,7 +100,24 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
   return (
     <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
       <section className="container contactUs">
-        <form onSubmit={handleSubmit} noValidate>
+       {isSubmit ? (  <div className="submitMsg">
+                <div className="submitMsgContainer">
+                  <div className="imgSection">
+                    <img src={successIcon} alt="Submit" />
+                  </div>
+                  <div className="message">
+                    <h4 className="thankYou">Thank You!</h4>
+                    <p className="thankText">
+                      Your form has been submitted successfully. Our team will
+                      respond to your inquiry shortly.
+                    </p>
+                  </div>
+                  <div className="goBack">
+                  <ScheduleCallButton buttonText="Go Back" onclick={handleGoBack}/>
+                  {/* <ScheduleCallButton buttonText="Go Back" /> */}
+                  </div>
+                </div>
+              </div>) :( <form onSubmit={handleSubmit} noValidate>
           <div className="contact">
             <div className="heading">
               <p>
@@ -165,7 +193,7 @@ const ContactUs1 = ({ isModalOpen, handleCloseModal }) => {
               <div className="buttonText">{loading ? "Loading...":"Submit"}</div>
             </button>
           </div>
-        </form>
+        </form>)}
       </section>
     </Modal>
   );
