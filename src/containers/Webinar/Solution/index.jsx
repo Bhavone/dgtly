@@ -103,7 +103,7 @@ const Solution = ({ zIndexSetUp, setZIndexSetUp }) => {
                   </div>
 
                   {/* <p>3:00PM - 4:30PM</p> */}
-                  <p>1pm to 2:30 pm (Singapore time)</p>
+                  <p>1 pm to 2:30 pm (Singapore time)</p>
                 </div>
               </div>
               <div className="limitedCapacityonly">
