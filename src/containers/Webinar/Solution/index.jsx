@@ -108,7 +108,7 @@ const Solution = ({ zIndexSetUp, setZIndexSetUp }) => {
               </div>
               <div className="limitedCapacityonly">
                 <h1>Limited Capacity Only</h1>
-                <p>Only 50 of 200 slots left</p>
+                <p>Only 49 of 200 slots left</p>
               </div>
               <div className="register">
                 <Reserve zIndexSetUp={zIndexSetUp} setZIndexSetUp={setZIndexSetUp}/>
