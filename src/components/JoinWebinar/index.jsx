@@ -6,12 +6,12 @@ const JoinWebinar = () => {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate("/webinar");
+    navigate("/contact-us");
   };
   return (
     <div className="container webinarContainer" onClick={handleRedirect}>
       <img src={calenderImage} alt="" />
-      <p>Join our free webinar on Apr 25</p>
+      <p>Watch our latest webinar</p>
     </div>
   );
 };
